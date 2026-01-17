@@ -331,5 +331,10 @@
   "timeBooking": "Time Booking",
   "comments": "Comments",
   "packing": "Packing",
-  "scanBarcode": "Scan Barcode"
+  "scanBarcode": "Scan Barcode",
+  "receivingNumber": "Receiving Number",
+  "supplierName": "Supplier Name",
+  "receivingDate": "Receiving Date",
+  "history": "History",
+  "startPacking": "Start Packing"
 }

@@ -901,4 +901,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get scanBarcode => 'Scan Barcode';
+
+  @override
+  String get receivingNumber => 'Receiving Number';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get startPacking => 'Start Packing';
 }

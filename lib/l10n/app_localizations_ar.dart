@@ -900,4 +900,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get scanBarcode => 'مسح الباركود';
+
+  @override
+  String get receivingNumber => 'رقم الاستلام';
+
+  @override
+  String get history => 'السجل';
+
+  @override
+  String get startPacking => 'بدء التعبئة';
 }

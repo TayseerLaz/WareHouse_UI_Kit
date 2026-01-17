@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
 import 'packaging_screen.dart';
+import 'pack_for_storage_list_screen.dart';
 
 class ReceivingFromVendorScreen extends StatelessWidget {
   const ReceivingFromVendorScreen({super.key});
@@ -79,7 +80,7 @@ class ReceivingFromVendorScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const PackagingScreen(),
+                          builder: (context) => const PackForStorageListScreen(),
                         ),
                       );
                     },

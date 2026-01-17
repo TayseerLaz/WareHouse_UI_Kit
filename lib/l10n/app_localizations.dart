@@ -1867,6 +1867,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Scan Barcode'**
   String get scanBarcode;
+
+  /// No description provided for @receivingNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Receiving Number'**
+  String get receivingNumber;
+
+  /// No description provided for @history.
+  ///
+  /// In en, this message translates to:
+  /// **'History'**
+  String get history;
+
+  /// No description provided for @startPacking.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Packing'**
+  String get startPacking;
 }
 
 class _AppLocalizationsDelegate

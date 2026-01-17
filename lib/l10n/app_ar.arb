@@ -324,5 +324,10 @@
   "timeBooking": "وقت الحجز",
   "comments": "ملاحظات",
   "packing": "التعبئة",
-  "scanBarcode": "مسح الباركود"
+  "scanBarcode": "مسح الباركود",
+  "receivingNumber": "رقم الاستلام",
+  "supplierName": "اسم المورد",
+  "receivingDate": "تاريخ الاستلام",
+  "history": "السجل",
+  "startPacking": "بدء التعبئة"
 }
