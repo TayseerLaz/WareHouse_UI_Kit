@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
+import 'packaging_screen.dart';
 
 class ReceivingFromVendorScreen extends StatelessWidget {
   const ReceivingFromVendorScreen({super.key});
@@ -75,8 +76,11 @@ class ReceivingFromVendorScreen extends StatelessWidget {
                     icon: Icons.archive_outlined,
                     color: const Color(0xFF155096),
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('${localizations.packOfStorage} - Coming Soon')),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PackagingScreen(),
+                        ),
                       );
                     },
                   ),

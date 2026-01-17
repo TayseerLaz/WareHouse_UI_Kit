@@ -1771,6 +1771,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clear'**
   String get clear;
+
+  /// No description provided for @packaging.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaging'**
+  String get packaging;
+
+  /// No description provided for @view.
+  ///
+  /// In en, this message translates to:
+  /// **'View'**
+  String get view;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @add.
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// No description provided for @totalCartons.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Cartons'**
+  String get totalCartons;
+
+  /// No description provided for @totalQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Quantity'**
+  String get totalQuantity;
+
+  /// No description provided for @printStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Print Status'**
+  String get printStatus;
+
+  /// No description provided for @cartonNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Carton Number'**
+  String get cartonNumber;
+
+  /// No description provided for @searchCartons.
+  ///
+  /// In en, this message translates to:
+  /// **'Search cartons, items, or batches'**
+  String get searchCartons;
+
+  /// No description provided for @addCarton.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Carton'**
+  String get addCarton;
+
+  /// No description provided for @editCarton.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Carton'**
+  String get editCarton;
+
+  /// No description provided for @deleteCarton.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Carton'**
+  String get deleteCarton;
+
+  /// No description provided for @code.
+  ///
+  /// In en, this message translates to:
+  /// **'Code'**
+  String get code;
+
+  /// No description provided for @packForStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Pack for Storage'**
+  String get packForStorage;
+
+  /// No description provided for @packing.
+  ///
+  /// In en, this message translates to:
+  /// **'Packing'**
+  String get packing;
+
+  /// No description provided for @scanBarcode.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan Barcode'**
+  String get scanBarcode;
 }
 
 class _AppLocalizationsDelegate

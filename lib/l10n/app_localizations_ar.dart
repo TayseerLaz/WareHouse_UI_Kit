@@ -518,7 +518,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get system => 'النظام';
 
   @override
-  String get items => 'العناصر';
+  String get items => 'أصناف';
 
   @override
   String get customers => 'العملاء';
@@ -608,7 +608,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get additionalItem => 'عنصر إضافي';
 
   @override
-  String get item => 'العنصر';
+  String get item => 'صنف';
 
   @override
   String get quantity => 'الكمية';
@@ -821,7 +821,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get car => 'السيارة';
 
   @override
-  String get comments => 'التعليقات';
+  String get comments => 'ملاحظات';
 
   @override
   String get createdBy => 'أنشئ بواسطة';
@@ -852,4 +852,52 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get clear => 'مسح';
+
+  @override
+  String get packaging => 'التعبئة';
+
+  @override
+  String get view => 'عرض';
+
+  @override
+  String get search => 'بحث';
+
+  @override
+  String get add => 'إضافة';
+
+  @override
+  String get totalCartons => 'إجمالي الكراتين';
+
+  @override
+  String get totalQuantity => 'الكمية الإجمالية';
+
+  @override
+  String get printStatus => 'حالة الطباعة';
+
+  @override
+  String get cartonNumber => 'رقم الكرتون';
+
+  @override
+  String get searchCartons => 'البحث عن كراتين أو أصناف أو دفعات';
+
+  @override
+  String get addCarton => 'إضافة كرتون';
+
+  @override
+  String get editCarton => 'تعديل الكرتون';
+
+  @override
+  String get deleteCarton => 'حذف الكرتون';
+
+  @override
+  String get code => 'الرمز';
+
+  @override
+  String get packForStorage => 'التعبئة للتخزين';
+
+  @override
+  String get packing => 'التعبئة';
+
+  @override
+  String get scanBarcode => 'مسح الباركود';
 }

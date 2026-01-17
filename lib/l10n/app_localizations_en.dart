@@ -853,4 +853,52 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get clear => 'Clear';
+
+  @override
+  String get packaging => 'Packaging';
+
+  @override
+  String get view => 'View';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get add => 'Add';
+
+  @override
+  String get totalCartons => 'Total Cartons';
+
+  @override
+  String get totalQuantity => 'Total Quantity';
+
+  @override
+  String get printStatus => 'Print Status';
+
+  @override
+  String get cartonNumber => 'Carton Number';
+
+  @override
+  String get searchCartons => 'Search cartons, items, or batches';
+
+  @override
+  String get addCarton => 'Add Carton';
+
+  @override
+  String get editCarton => 'Edit Carton';
+
+  @override
+  String get deleteCarton => 'Delete Carton';
+
+  @override
+  String get code => 'Code';
+
+  @override
+  String get packForStorage => 'Pack for Storage';
+
+  @override
+  String get packing => 'Packing';
+
+  @override
+  String get scanBarcode => 'Scan Barcode';
 }
