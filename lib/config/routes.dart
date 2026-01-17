@@ -11,6 +11,8 @@ import '../screens/admin/administration_screen.dart';
 import '../screens/admin/users/users_screen.dart';
 import '../screens/admin/users/user_form_screen.dart';
 import '../screens/admin/synchronization_screen.dart';
+import '../screens/admin/import_screen.dart';
+import '../screens/admin/export_screen.dart';
 
 /// App Routes Configuration
 /// Centralized route management for the entire application
@@ -28,6 +30,8 @@ class AppRoutes {
   static const String users = '/users';
   static const String userForm = '/user_form';
   static const String synchronization = '/synchronization';
+  static const String importData = '/import';
+  static const String exportData = '/export';
 
   /// Route generator
   static Map<String, WidgetBuilder> get routes => {
@@ -43,5 +47,7 @@ class AppRoutes {
         users: (context) => const UsersScreen(),
         userForm: (context) => const UserFormScreen(),
         synchronization: (context) => const SynchronizationScreen(),
+        importData: (context) => const ImportScreen(),
+        exportData: (context) => const ExportScreen(),
       };
 }
