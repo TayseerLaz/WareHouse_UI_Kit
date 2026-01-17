@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
 
-class SynchronizationScreen extends StatelessWidget {
-  const SynchronizationScreen({super.key});
+class ReceivingFromVendorScreen extends StatelessWidget {
+  const ReceivingFromVendorScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,14 @@ class SynchronizationScreen extends StatelessWidget {
                   child: const Icon(Icons.arrow_back, color: Colors.white),
                 ),
                 const SizedBox(width: 16),
-                Text(
-                  localizations.synchronization,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
+                Expanded(
+                  child: Text(
+                    localizations.receivingFromVendor,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],
@@ -54,28 +56,42 @@ class SynchronizationScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  // Import Button
-                  _buildSyncButton(
+                  // GRPO Button
+                  _buildActionButton(
                     context: context,
-                    title: localizations.importData,
-                    subtitle: localizations.importFromERPToMobile,
-                    icon: Icons.download_outlined,
-                    color: Colors.green,
+                    title: localizations.grpo,
+                    icon: Icons.inventory_2_outlined,
+                    color: const Color(0xFF155096),
                     onTap: () {
-                      Navigator.pushNamed(context, '/import');
+                      Navigator.pushNamed(context, '/grpo');
                     },
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 16),
 
-                  // Export Button
-                  _buildSyncButton(
+                  // Pack of Storage Button
+                  _buildActionButton(
                     context: context,
-                    title: localizations.exportData,
-                    subtitle: localizations.exportFromMobileToERP,
-                    icon: Icons.upload_outlined,
-                    color: Colors.blue,
+                    title: localizations.packOfStorage,
+                    icon: Icons.archive_outlined,
+                    color: const Color(0xFF155096),
                     onTap: () {
-                      Navigator.pushNamed(context, '/export');
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('${localizations.packOfStorage} - Coming Soon')),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 16),
+
+                  // Put Away Button
+                  _buildActionButton(
+                    context: context,
+                    title: localizations.putAway,
+                    icon: Icons.move_to_inbox_outlined,
+                    color: const Color(0xFF155096),
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('${localizations.putAway} - Coming Soon')),
+                      );
                     },
                   ),
                 ],
@@ -87,15 +103,15 @@ class SynchronizationScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSyncButton({
+  Widget _buildActionButton({
     required BuildContext context,
     required String title,
-    required String subtitle,
     required IconData icon,
     required Color color,
     required VoidCallback onTap,
   }) {
     return Container(
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -122,30 +138,17 @@ class SynchronizationScreen extends StatelessWidget {
                     color: color.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Icon(icon, color: color, size: 40),
+                  child: Icon(icon, color: color, size: 32),
                 ),
                 const SizedBox(width: 20),
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF262626),
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        subtitle,
-                        style: const TextStyle(
-                          fontSize: 14,
-                          color: Color(0xFF7F7F7F),
-                        ),
-                      ),
-                    ],
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF262626),
+                    ),
                   ),
                 ),
                 const Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 20),

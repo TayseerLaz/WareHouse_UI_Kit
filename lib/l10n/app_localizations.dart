@@ -1159,6 +1159,618 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please select at least one data type'**
   String get selectAtLeastOne;
+
+  /// No description provided for @receivingFromVendor.
+  ///
+  /// In en, this message translates to:
+  /// **'Receiving from Vendor'**
+  String get receivingFromVendor;
+
+  /// No description provided for @grpo.
+  ///
+  /// In en, this message translates to:
+  /// **'GRPO'**
+  String get grpo;
+
+  /// No description provided for @packOfStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Pack of Storage'**
+  String get packOfStorage;
+
+  /// No description provided for @putAway.
+  ///
+  /// In en, this message translates to:
+  /// **'Put Away'**
+  String get putAway;
+
+  /// No description provided for @poNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'PO #'**
+  String get poNumber;
+
+  /// No description provided for @receivingDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Receiving Date'**
+  String get receivingDate;
+
+  /// No description provided for @vendor.
+  ///
+  /// In en, this message translates to:
+  /// **'Vendor'**
+  String get vendor;
+
+  /// No description provided for @amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get amount;
+
+  /// No description provided for @currency.
+  ///
+  /// In en, this message translates to:
+  /// **'Currency'**
+  String get currency;
+
+  /// No description provided for @searchGRPO.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by PO, Vendor, Reference...'**
+  String get searchGRPO;
+
+  /// No description provided for @advancedFilters.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced Filters'**
+  String get advancedFilters;
+
+  /// No description provided for @createNewGRPO.
+  ///
+  /// In en, this message translates to:
+  /// **'Create New GRPO'**
+  String get createNewGRPO;
+
+  /// No description provided for @scanQR.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan QR Code'**
+  String get scanQR;
+
+  /// No description provided for @refresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh'**
+  String get refresh;
+
+  /// No description provided for @suppliers.
+  ///
+  /// In en, this message translates to:
+  /// **'Suppliers'**
+  String get suppliers;
+
+  /// No description provided for @searchSuppliers.
+  ///
+  /// In en, this message translates to:
+  /// **'Search suppliers...'**
+  String get searchSuppliers;
+
+  /// No description provided for @supplierCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier Code'**
+  String get supplierCode;
+
+  /// No description provided for @supplierName.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier Name'**
+  String get supplierName;
+
+  /// No description provided for @supplierNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier Number'**
+  String get supplierNumber;
+
+  /// No description provided for @additionalItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Additional Item'**
+  String get additionalItem;
+
+  /// No description provided for @item.
+  ///
+  /// In en, this message translates to:
+  /// **'Item'**
+  String get item;
+
+  /// No description provided for @quantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get quantity;
+
+  /// No description provided for @itemCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Item Code'**
+  String get itemCode;
+
+  /// No description provided for @itemName.
+  ///
+  /// In en, this message translates to:
+  /// **'Item Name'**
+  String get itemName;
+
+  /// No description provided for @poReference.
+  ///
+  /// In en, this message translates to:
+  /// **'PO Reference'**
+  String get poReference;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @carton.
+  ///
+  /// In en, this message translates to:
+  /// **'Carton'**
+  String get carton;
+
+  /// No description provided for @manual.
+  ///
+  /// In en, this message translates to:
+  /// **'Manual'**
+  String get manual;
+
+  /// No description provided for @inventoryList.
+  ///
+  /// In en, this message translates to:
+  /// **'Inventory List'**
+  String get inventoryList;
+
+  /// No description provided for @searchInventory.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by item code, name, barcode...'**
+  String get searchInventory;
+
+  /// No description provided for @authorizationGroup.
+  ///
+  /// In en, this message translates to:
+  /// **'Authorization Group'**
+  String get authorizationGroup;
+
+  /// No description provided for @barcode.
+  ///
+  /// In en, this message translates to:
+  /// **'Barcode'**
+  String get barcode;
+
+  /// No description provided for @remainingQty.
+  ///
+  /// In en, this message translates to:
+  /// **'Remaining Qty'**
+  String get remainingQty;
+
+  /// No description provided for @bins.
+  ///
+  /// In en, this message translates to:
+  /// **'Bins'**
+  String get bins;
+
+  /// No description provided for @uom.
+  ///
+  /// In en, this message translates to:
+  /// **'UOM'**
+  String get uom;
+
+  /// No description provided for @batch.
+  ///
+  /// In en, this message translates to:
+  /// **'Batch'**
+  String get batch;
+
+  /// No description provided for @productionDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Production Date'**
+  String get productionDate;
+
+  /// No description provided for @expiryDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry Date'**
+  String get expiryDate;
+
+  /// No description provided for @enterNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Notes...'**
+  String get enterNotes;
+
+  /// No description provided for @addBatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Batch'**
+  String get addBatch;
+
+  /// No description provided for @pleaseFillAllFields.
+  ///
+  /// In en, this message translates to:
+  /// **'Please fill in all the fields'**
+  String get pleaseFillAllFields;
+
+  /// No description provided for @notes.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get notes;
+
+  /// No description provided for @selectBin.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Bin'**
+  String get selectBin;
+
+  /// No description provided for @enterBatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Batch'**
+  String get enterBatch;
+
+  /// No description provided for @enterQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Quantity'**
+  String get enterQuantity;
+
+  /// No description provided for @recordList.
+  ///
+  /// In en, this message translates to:
+  /// **'Record List'**
+  String get recordList;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
+
+  /// No description provided for @print.
+  ///
+  /// In en, this message translates to:
+  /// **'Print'**
+  String get print;
+
+  /// No description provided for @info.
+  ///
+  /// In en, this message translates to:
+  /// **'Info'**
+  String get info;
+
+  /// No description provided for @prodDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Prod Date'**
+  String get prodDate;
+
+  /// No description provided for @expDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Exp Date'**
+  String get expDate;
+
+  /// No description provided for @noBatchesAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'No batches added yet'**
+  String get noBatchesAdded;
+
+  /// No description provided for @packageList.
+  ///
+  /// In en, this message translates to:
+  /// **'Package List'**
+  String get packageList;
+
+  /// No description provided for @packId.
+  ///
+  /// In en, this message translates to:
+  /// **'Pack ID'**
+  String get packId;
+
+  /// No description provided for @printed.
+  ///
+  /// In en, this message translates to:
+  /// **'Printed'**
+  String get printed;
+
+  /// No description provided for @notPrinted.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Printed'**
+  String get notPrinted;
+
+  /// No description provided for @printAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Print All'**
+  String get printAll;
+
+  /// No description provided for @printSelected.
+  ///
+  /// In en, this message translates to:
+  /// **'Print Selected'**
+  String get printSelected;
+
+  /// No description provided for @addPhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Photo'**
+  String get addPhoto;
+
+  /// No description provided for @changePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Photo'**
+  String get changePhoto;
+
+  /// No description provided for @takePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Take Photo'**
+  String get takePhoto;
+
+  /// No description provided for @chooseFromGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from Gallery'**
+  String get chooseFromGallery;
+
+  /// No description provided for @addStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Status'**
+  String get addStatus;
+
+  /// No description provided for @batchesSerials.
+  ///
+  /// In en, this message translates to:
+  /// **'Batches / Serials'**
+  String get batchesSerials;
+
+  /// No description provided for @good.
+  ///
+  /// In en, this message translates to:
+  /// **'Good'**
+  String get good;
+
+  /// No description provided for @bad.
+  ///
+  /// In en, this message translates to:
+  /// **'Bad'**
+  String get bad;
+
+  /// No description provided for @damaged.
+  ///
+  /// In en, this message translates to:
+  /// **'Damaged'**
+  String get damaged;
+
+  /// No description provided for @blocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Blocked'**
+  String get blocked;
+
+  /// No description provided for @addQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Quantity'**
+  String get addQuantity;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @selectStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Status'**
+  String get selectStatus;
+
+  /// No description provided for @selectBatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Batch'**
+  String get selectBatch;
+
+  /// No description provided for @partiallyReceived.
+  ///
+  /// In en, this message translates to:
+  /// **'Partially Received'**
+  String get partiallyReceived;
+
+  /// No description provided for @fullyReceived.
+  ///
+  /// In en, this message translates to:
+  /// **'Fully Received'**
+  String get fullyReceived;
+
+  /// No description provided for @notReceived.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Received'**
+  String get notReceived;
+
+  /// No description provided for @pending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get pending;
+
+  /// No description provided for @quitActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quit Activity'**
+  String get quitActivity;
+
+  /// No description provided for @quitActivityMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to save your progress or discard the data?'**
+  String get quitActivityMessage;
+
+  /// No description provided for @saveContinueLater.
+  ///
+  /// In en, this message translates to:
+  /// **'Save & Continue Later'**
+  String get saveContinueLater;
+
+  /// No description provided for @discardData.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard Data'**
+  String get discardData;
+
+  /// No description provided for @bookingDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Booking Date'**
+  String get bookingDate;
+
+  /// No description provided for @timeBooking.
+  ///
+  /// In en, this message translates to:
+  /// **'Time Booking'**
+  String get timeBooking;
+
+  /// No description provided for @dueDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Due Date'**
+  String get dueDate;
+
+  /// No description provided for @proceedToPacking.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed to Packing'**
+  String get proceedToPacking;
+
+  /// No description provided for @draft.
+  ///
+  /// In en, this message translates to:
+  /// **'Draft'**
+  String get draft;
+
+  /// No description provided for @inReceiving.
+  ///
+  /// In en, this message translates to:
+  /// **'In Receiving'**
+  String get inReceiving;
+
+  /// No description provided for @completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// No description provided for @posted.
+  ///
+  /// In en, this message translates to:
+  /// **'Posted'**
+  String get posted;
+
+  /// No description provided for @bpReference.
+  ///
+  /// In en, this message translates to:
+  /// **'BP Reference'**
+  String get bpReference;
+
+  /// No description provided for @driverName.
+  ///
+  /// In en, this message translates to:
+  /// **'Driver Name'**
+  String get driverName;
+
+  /// No description provided for @car.
+  ///
+  /// In en, this message translates to:
+  /// **'Car'**
+  String get car;
+
+  /// No description provided for @comments.
+  ///
+  /// In en, this message translates to:
+  /// **'Comments'**
+  String get comments;
+
+  /// No description provided for @createdBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Created By'**
+  String get createdBy;
+
+  /// No description provided for @saveAsDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Save as Draft'**
+  String get saveAsDraft;
+
+  /// No description provided for @enterBPReference.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter BP Reference'**
+  String get enterBPReference;
+
+  /// No description provided for @enterDriverName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Driver Name'**
+  String get enterDriverName;
+
+  /// No description provided for @enterCarInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Car Info'**
+  String get enterCarInfo;
+
+  /// No description provided for @enterComments.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Comments'**
+  String get enterComments;
+
+  /// No description provided for @signature.
+  ///
+  /// In en, this message translates to:
+  /// **'Signature'**
+  String get signature;
+
+  /// No description provided for @addSignature.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Signature'**
+  String get addSignature;
+
+  /// No description provided for @drawYourSignature.
+  ///
+  /// In en, this message translates to:
+  /// **'Draw Your Signature'**
+  String get drawYourSignature;
+
+  /// No description provided for @clear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
 }
 
 class _AppLocalizationsDelegate

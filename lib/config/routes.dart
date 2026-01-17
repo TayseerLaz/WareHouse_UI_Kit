@@ -4,6 +4,11 @@ import '../screens/auth/login_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/demos/notification_demo_screen.dart';
 import '../screens/home/navigation_menu_screen.dart';
+import '../screens/home/receiving_from_vendor_screen.dart';
+import '../screens/home/grpo_screen.dart';
+import '../screens/home/suppliers_screen.dart';
+import '../screens/home/grpo_details_screen.dart';
+import '../screens/home/inventory_list_screen.dart';
 import '../screens/settings/profile_screen.dart';
 import '../screens/settings/settings_screen.dart';
 import '../screens/demos/widgets_demo_screen.dart';
@@ -21,6 +26,11 @@ class AppRoutes {
   static const String home = '/';
   static const String login = '/login';
   static const String homeScreen = '/home';
+  static const String receivingFromVendor = '/receiving_from_vendor';
+  static const String grpo = '/grpo';
+  static const String suppliers = '/suppliers';
+  static const String grpoDetails = '/grpo_details';
+  static const String inventoryList = '/inventory_list';
   static const String notificationDemo = '/notification_demo';
   static const String navigationMenu = '/navigation_menu';
   static const String profile = '/profile';
@@ -38,6 +48,10 @@ class AppRoutes {
         home: (context) => const ScreenSelector(),
         login: (context) => const LoginScreen(),
         homeScreen: (context) => const HomeScreen(),
+        receivingFromVendor: (context) => const ReceivingFromVendorScreen(),
+        grpo: (context) => const GRPOScreen(),
+        suppliers: (context) => const SuppliersScreen(),
+        inventoryList: (context) => const InventoryListScreen(),
         notificationDemo: (context) => const NotificationDemoScreen(),
         navigationMenu: (context) => const NavigationMenuScreen(),
         profile: (context) => const ProfileScreen(),

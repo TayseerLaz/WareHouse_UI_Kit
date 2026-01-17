@@ -546,4 +546,310 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get selectAtLeastOne => 'يرجى اختيار نوع بيانات واحد على الأقل';
+
+  @override
+  String get receivingFromVendor => 'الاستلام من المورد';
+
+  @override
+  String get grpo => 'استلام بضاعة';
+
+  @override
+  String get packOfStorage => 'حزمة التخزين';
+
+  @override
+  String get putAway => 'وضع بعيدا';
+
+  @override
+  String get poNumber => 'رقم أمر الشراء';
+
+  @override
+  String get receivingDate => 'تاريخ الاستلام';
+
+  @override
+  String get vendor => 'المورد';
+
+  @override
+  String get amount => 'المبلغ';
+
+  @override
+  String get currency => 'العملة';
+
+  @override
+  String get searchGRPO => 'البحث برقم الطلب، المورد، المرجع...';
+
+  @override
+  String get advancedFilters => 'فلاتر متقدمة';
+
+  @override
+  String get createNewGRPO => 'إنشاء استلام جديد';
+
+  @override
+  String get scanQR => 'مسح رمز QR';
+
+  @override
+  String get refresh => 'تحديث';
+
+  @override
+  String get suppliers => 'الموردين';
+
+  @override
+  String get searchSuppliers => 'البحث عن الموردين...';
+
+  @override
+  String get supplierCode => 'كود المورد';
+
+  @override
+  String get supplierName => 'اسم المورد';
+
+  @override
+  String get supplierNumber => 'رقم المورد';
+
+  @override
+  String get additionalItem => 'عنصر إضافي';
+
+  @override
+  String get item => 'العنصر';
+
+  @override
+  String get quantity => 'الكمية';
+
+  @override
+  String get itemCode => 'كود العنصر';
+
+  @override
+  String get itemName => 'اسم العنصر';
+
+  @override
+  String get poReference => 'مرجع أمر الشراء';
+
+  @override
+  String get next => 'التالي';
+
+  @override
+  String get carton => 'كرتون';
+
+  @override
+  String get manual => 'يدوي';
+
+  @override
+  String get inventoryList => 'قائمة المخزون';
+
+  @override
+  String get searchInventory => 'البحث بكود العنصر، الاسم، الباركود...';
+
+  @override
+  String get authorizationGroup => 'مجموعة التفويض';
+
+  @override
+  String get barcode => 'الباركود';
+
+  @override
+  String get remainingQty => 'الكمية المتبقية';
+
+  @override
+  String get bins => 'الصناديق';
+
+  @override
+  String get uom => 'وحدة القياس';
+
+  @override
+  String get batch => 'الدفعة';
+
+  @override
+  String get productionDate => 'تاريخ الإنتاج';
+
+  @override
+  String get expiryDate => 'تاريخ الانتهاء';
+
+  @override
+  String get enterNotes => 'أدخل الملاحظات...';
+
+  @override
+  String get addBatch => 'إضافة دفعة';
+
+  @override
+  String get pleaseFillAllFields => 'يرجى ملء جميع الحقول';
+
+  @override
+  String get notes => 'ملاحظات';
+
+  @override
+  String get selectBin => 'اختر الصندوق';
+
+  @override
+  String get enterBatch => 'أدخل الدفعة';
+
+  @override
+  String get enterQuantity => 'أدخل الكمية';
+
+  @override
+  String get recordList => 'قائمة السجلات';
+
+  @override
+  String get ok => 'موافق';
+
+  @override
+  String get print => 'طباعة';
+
+  @override
+  String get info => 'معلومات';
+
+  @override
+  String get prodDate => 'تاريخ الإنتاج';
+
+  @override
+  String get expDate => 'تاريخ الانتهاء';
+
+  @override
+  String get noBatchesAdded => 'لم يتم إضافة أي دفعات بعد';
+
+  @override
+  String get packageList => 'قائمة الطرود';
+
+  @override
+  String get packId => 'معرف الطرد';
+
+  @override
+  String get printed => 'مطبوع';
+
+  @override
+  String get notPrinted => 'غير مطبوع';
+
+  @override
+  String get printAll => 'طباعة الكل';
+
+  @override
+  String get printSelected => 'طباعة المحدد';
+
+  @override
+  String get addPhoto => 'إضافة صورة';
+
+  @override
+  String get changePhoto => 'تغيير الصورة';
+
+  @override
+  String get takePhoto => 'التقاط صورة';
+
+  @override
+  String get chooseFromGallery => 'اختر من المعرض';
+
+  @override
+  String get addStatus => 'إضافة حالة';
+
+  @override
+  String get batchesSerials => 'الدفعات / الأرقام التسلسلية';
+
+  @override
+  String get good => 'جيد';
+
+  @override
+  String get bad => 'سيء';
+
+  @override
+  String get damaged => 'تالف';
+
+  @override
+  String get blocked => 'محظور';
+
+  @override
+  String get addQuantity => 'إضافة كمية';
+
+  @override
+  String get done => 'تم';
+
+  @override
+  String get selectStatus => 'اختر الحالة';
+
+  @override
+  String get selectBatch => 'اختر الدفعة';
+
+  @override
+  String get partiallyReceived => 'مستلم جزئياً';
+
+  @override
+  String get fullyReceived => 'مستلم بالكامل';
+
+  @override
+  String get notReceived => 'غير مستلم';
+
+  @override
+  String get pending => 'قيد الانتظار';
+
+  @override
+  String get quitActivity => 'إنهاء النشاط';
+
+  @override
+  String get quitActivityMessage => 'هل تريد حفظ تقدمك أو تجاهل البيانات؟';
+
+  @override
+  String get saveContinueLater => 'حفظ ومتابعة لاحقاً';
+
+  @override
+  String get discardData => 'تجاهل البيانات';
+
+  @override
+  String get bookingDate => 'تاريخ الحجز';
+
+  @override
+  String get timeBooking => 'وقت الحجز';
+
+  @override
+  String get dueDate => 'تاريخ الاستحقاق';
+
+  @override
+  String get proceedToPacking => 'المتابعة للتعبئة';
+
+  @override
+  String get draft => 'مسودة';
+
+  @override
+  String get inReceiving => 'قيد الاستلام';
+
+  @override
+  String get completed => 'مكتمل';
+
+  @override
+  String get posted => 'منشور';
+
+  @override
+  String get bpReference => 'مرجع الشريك التجاري';
+
+  @override
+  String get driverName => 'اسم السائق';
+
+  @override
+  String get car => 'السيارة';
+
+  @override
+  String get comments => 'التعليقات';
+
+  @override
+  String get createdBy => 'أنشئ بواسطة';
+
+  @override
+  String get saveAsDraft => 'حفظ كمسودة';
+
+  @override
+  String get enterBPReference => 'أدخل مرجع الشريك التجاري';
+
+  @override
+  String get enterDriverName => 'أدخل اسم السائق';
+
+  @override
+  String get enterCarInfo => 'أدخل معلومات السيارة';
+
+  @override
+  String get enterComments => 'أدخل التعليقات';
+
+  @override
+  String get signature => 'التوقيع';
+
+  @override
+  String get addSignature => 'إضافة توقيع';
+
+  @override
+  String get drawYourSignature => 'ارسم توقيعك';
+
+  @override
+  String get clear => 'مسح';
 }

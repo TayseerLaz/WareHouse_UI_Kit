@@ -546,4 +546,311 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get selectAtLeastOne => 'Please select at least one data type';
+
+  @override
+  String get receivingFromVendor => 'Receiving from Vendor';
+
+  @override
+  String get grpo => 'GRPO';
+
+  @override
+  String get packOfStorage => 'Pack of Storage';
+
+  @override
+  String get putAway => 'Put Away';
+
+  @override
+  String get poNumber => 'PO #';
+
+  @override
+  String get receivingDate => 'Receiving Date';
+
+  @override
+  String get vendor => 'Vendor';
+
+  @override
+  String get amount => 'Amount';
+
+  @override
+  String get currency => 'Currency';
+
+  @override
+  String get searchGRPO => 'Search by PO, Vendor, Reference...';
+
+  @override
+  String get advancedFilters => 'Advanced Filters';
+
+  @override
+  String get createNewGRPO => 'Create New GRPO';
+
+  @override
+  String get scanQR => 'Scan QR Code';
+
+  @override
+  String get refresh => 'Refresh';
+
+  @override
+  String get suppliers => 'Suppliers';
+
+  @override
+  String get searchSuppliers => 'Search suppliers...';
+
+  @override
+  String get supplierCode => 'Supplier Code';
+
+  @override
+  String get supplierName => 'Supplier Name';
+
+  @override
+  String get supplierNumber => 'Supplier Number';
+
+  @override
+  String get additionalItem => 'Additional Item';
+
+  @override
+  String get item => 'Item';
+
+  @override
+  String get quantity => 'Quantity';
+
+  @override
+  String get itemCode => 'Item Code';
+
+  @override
+  String get itemName => 'Item Name';
+
+  @override
+  String get poReference => 'PO Reference';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get carton => 'Carton';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get inventoryList => 'Inventory List';
+
+  @override
+  String get searchInventory => 'Search by item code, name, barcode...';
+
+  @override
+  String get authorizationGroup => 'Authorization Group';
+
+  @override
+  String get barcode => 'Barcode';
+
+  @override
+  String get remainingQty => 'Remaining Qty';
+
+  @override
+  String get bins => 'Bins';
+
+  @override
+  String get uom => 'UOM';
+
+  @override
+  String get batch => 'Batch';
+
+  @override
+  String get productionDate => 'Production Date';
+
+  @override
+  String get expiryDate => 'Expiry Date';
+
+  @override
+  String get enterNotes => 'Enter Notes...';
+
+  @override
+  String get addBatch => 'Add Batch';
+
+  @override
+  String get pleaseFillAllFields => 'Please fill in all the fields';
+
+  @override
+  String get notes => 'Notes';
+
+  @override
+  String get selectBin => 'Select Bin';
+
+  @override
+  String get enterBatch => 'Enter Batch';
+
+  @override
+  String get enterQuantity => 'Enter Quantity';
+
+  @override
+  String get recordList => 'Record List';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get print => 'Print';
+
+  @override
+  String get info => 'Info';
+
+  @override
+  String get prodDate => 'Prod Date';
+
+  @override
+  String get expDate => 'Exp Date';
+
+  @override
+  String get noBatchesAdded => 'No batches added yet';
+
+  @override
+  String get packageList => 'Package List';
+
+  @override
+  String get packId => 'Pack ID';
+
+  @override
+  String get printed => 'Printed';
+
+  @override
+  String get notPrinted => 'Not Printed';
+
+  @override
+  String get printAll => 'Print All';
+
+  @override
+  String get printSelected => 'Print Selected';
+
+  @override
+  String get addPhoto => 'Add Photo';
+
+  @override
+  String get changePhoto => 'Change Photo';
+
+  @override
+  String get takePhoto => 'Take Photo';
+
+  @override
+  String get chooseFromGallery => 'Choose from Gallery';
+
+  @override
+  String get addStatus => 'Add Status';
+
+  @override
+  String get batchesSerials => 'Batches / Serials';
+
+  @override
+  String get good => 'Good';
+
+  @override
+  String get bad => 'Bad';
+
+  @override
+  String get damaged => 'Damaged';
+
+  @override
+  String get blocked => 'Blocked';
+
+  @override
+  String get addQuantity => 'Add Quantity';
+
+  @override
+  String get done => 'Done';
+
+  @override
+  String get selectStatus => 'Select Status';
+
+  @override
+  String get selectBatch => 'Select Batch';
+
+  @override
+  String get partiallyReceived => 'Partially Received';
+
+  @override
+  String get fullyReceived => 'Fully Received';
+
+  @override
+  String get notReceived => 'Not Received';
+
+  @override
+  String get pending => 'Pending';
+
+  @override
+  String get quitActivity => 'Quit Activity';
+
+  @override
+  String get quitActivityMessage =>
+      'Do you want to save your progress or discard the data?';
+
+  @override
+  String get saveContinueLater => 'Save & Continue Later';
+
+  @override
+  String get discardData => 'Discard Data';
+
+  @override
+  String get bookingDate => 'Booking Date';
+
+  @override
+  String get timeBooking => 'Time Booking';
+
+  @override
+  String get dueDate => 'Due Date';
+
+  @override
+  String get proceedToPacking => 'Proceed to Packing';
+
+  @override
+  String get draft => 'Draft';
+
+  @override
+  String get inReceiving => 'In Receiving';
+
+  @override
+  String get completed => 'Completed';
+
+  @override
+  String get posted => 'Posted';
+
+  @override
+  String get bpReference => 'BP Reference';
+
+  @override
+  String get driverName => 'Driver Name';
+
+  @override
+  String get car => 'Car';
+
+  @override
+  String get comments => 'Comments';
+
+  @override
+  String get createdBy => 'Created By';
+
+  @override
+  String get saveAsDraft => 'Save as Draft';
+
+  @override
+  String get enterBPReference => 'Enter BP Reference';
+
+  @override
+  String get enterDriverName => 'Enter Driver Name';
+
+  @override
+  String get enterCarInfo => 'Enter Car Info';
+
+  @override
+  String get enterComments => 'Enter Comments';
+
+  @override
+  String get signature => 'Signature';
+
+  @override
+  String get addSignature => 'Add Signature';
+
+  @override
+  String get drawYourSignature => 'Draw Your Signature';
+
+  @override
+  String get clear => 'Clear';
 }
