@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../status_badge.dart';
+import '../common/status_badge.dart';
 import 'base_card.dart';
 
 class PaymentStatusCard extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../l10n/app_localizations.dart';
-import '../widgets/cards/item_info_card.dart';
-import '../widgets/cards/inventory_entry_card.dart';
-import '../widgets/cards/order_summary_card.dart';
-import '../widgets/cards/payment_status_card.dart';
-import '../widgets/status_badge.dart';
+import '../../l10n/app_localizations.dart';
+import '../../widgets/cards/item_info_card.dart';
+import '../../widgets/cards/inventory_entry_card.dart';
+import '../../widgets/cards/order_summary_card.dart';
+import '../../widgets/cards/payment_status_card.dart';
+import '../../widgets/common/status_badge.dart';
 
 class WidgetsDemoScreen extends StatelessWidget {
   const WidgetsDemoScreen({super.key});

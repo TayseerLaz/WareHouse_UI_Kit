@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../l10n/app_localizations.dart';
-import '../widgets/notification.dart';
+import '../../l10n/app_localizations.dart';
+import '../../widgets/common/notification.dart';
 
 class NotificationDemoScreen extends StatelessWidget {
   const NotificationDemoScreen({super.key});
