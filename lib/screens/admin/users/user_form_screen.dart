@@ -223,7 +223,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
                       label: localizations.company,
                       value: _selectedCompany,
                       hint: localizations.selectCompany,
-                      items: ['Pegolive_US', 'Company A', 'Company B', 'Company C'],
+                      items: ['Pregolive_US', 'Warehouses', 'Auth Group'],
                       onChanged: (value) {
                         setState(() {
                           _selectedCompany = value;

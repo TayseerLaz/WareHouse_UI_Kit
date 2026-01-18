@@ -1175,7 +1175,7 @@ abstract class AppLocalizations {
   /// No description provided for @packOfStorage.
   ///
   /// In en, this message translates to:
-  /// **'Pack of Storage'**
+  /// **'Pack for Storage'**
   String get packOfStorage;
 
   /// No description provided for @putAway.
@@ -1463,7 +1463,7 @@ abstract class AppLocalizations {
   /// No description provided for @expDate.
   ///
   /// In en, this message translates to:
-  /// **'Exp Date'**
+  /// **'ExpDate'**
   String get expDate;
 
   /// No description provided for @noBatchesAdded.
@@ -1885,6 +1885,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Start Packing'**
   String get startPacking;
+
+  /// No description provided for @fromBins.
+  ///
+  /// In en, this message translates to:
+  /// **'From Bins'**
+  String get fromBins;
+
+  /// No description provided for @toBin.
+  ///
+  /// In en, this message translates to:
+  /// **'To Bin'**
+  String get toBin;
+
+  /// No description provided for @proceed.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed'**
+  String get proceed;
+
+  /// No description provided for @binWarehouse.
+  ///
+  /// In en, this message translates to:
+  /// **'Bin Warehouse'**
+  String get binWarehouse;
+
+  /// No description provided for @toBins.
+  ///
+  /// In en, this message translates to:
+  /// **'To Bins'**
+  String get toBins;
+
+  /// No description provided for @cartonId.
+  ///
+  /// In en, this message translates to:
+  /// **'Carton ID'**
+  String get cartonId;
+
+  /// No description provided for @batches.
+  ///
+  /// In en, this message translates to:
+  /// **'Batches'**
+  String get batches;
+
+  /// No description provided for @attribute1.
+  ///
+  /// In en, this message translates to:
+  /// **'Attribute1'**
+  String get attribute1;
+
+  /// No description provided for @filter.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter'**
+  String get filter;
+
+  /// No description provided for @multiSelect.
+  ///
+  /// In en, this message translates to:
+  /// **'Multi-Select'**
+  String get multiSelect;
+
+  /// No description provided for @searchRoles.
+  ///
+  /// In en, this message translates to:
+  /// **'Search roles by name...'**
+  String get searchRoles;
+
+  /// No description provided for @noRolesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No roles found'**
+  String get noRolesFound;
+
+  /// No description provided for @editPermissions.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Permissions'**
+  String get editPermissions;
+
+  /// No description provided for @permissionsFor.
+  ///
+  /// In en, this message translates to:
+  /// **'Permissions for'**
+  String get permissionsFor;
+
+  /// No description provided for @permissionModules.
+  ///
+  /// In en, this message translates to:
+  /// **'Permission Modules'**
+  String get permissionModules;
+
+  /// No description provided for @grantAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Grant Access'**
+  String get grantAccess;
+
+  /// No description provided for @revokeAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Revoke Access'**
+  String get revokeAccess;
+
+  /// No description provided for @representative.
+  ///
+  /// In en, this message translates to:
+  /// **'Representative'**
+  String get representative;
+
+  /// No description provided for @warehouseKeeper.
+  ///
+  /// In en, this message translates to:
+  /// **'Warehouse-keeper'**
+  String get warehouseKeeper;
+
+  /// No description provided for @clerk.
+  ///
+  /// In en, this message translates to:
+  /// **'Clerk'**
+  String get clerk;
+
+  /// No description provided for @wClerk.
+  ///
+  /// In en, this message translates to:
+  /// **'w-clerk'**
+  String get wClerk;
+
+  /// No description provided for @customRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Role'**
+  String get customRole;
+
+  /// No description provided for @permissionsUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Permissions updated successfully'**
+  String get permissionsUpdated;
+
+  /// No description provided for @returnToVendorPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Return To Vendor'**
+  String get returnToVendorPermission;
+
+  /// No description provided for @deliveryToCustomerPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery To Customer'**
+  String get deliveryToCustomerPermission;
+
+  /// No description provided for @returnFromCustomerPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Return From Customer'**
+  String get returnFromCustomerPermission;
+
+  /// No description provided for @inventoryTransferPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Inventory Transfer'**
+  String get inventoryTransferPermission;
+
+  /// No description provided for @inventoryTransferInPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Inventory Transfer In'**
+  String get inventoryTransferInPermission;
+
+  /// No description provided for @inventoryMovePermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Inventory Move'**
+  String get inventoryMovePermission;
+
+  /// No description provided for @goodReceiptsPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Good Receipts'**
+  String get goodReceiptsPermission;
+
+  /// No description provided for @goodIssuePermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Good Issue'**
+  String get goodIssuePermission;
+
+  /// No description provided for @transactionsPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Transactions'**
+  String get transactionsPermission;
+
+  /// No description provided for @administrationPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Administration'**
+  String get administrationPermission;
+
+  /// No description provided for @synchronizationPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Synchronization'**
+  String get synchronizationPermission;
+
+  /// No description provided for @receivingFromVendorPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Receiving From Vendor'**
+  String get receivingFromVendorPermission;
 }
 
 class _AppLocalizationsDelegate

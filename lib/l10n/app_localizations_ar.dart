@@ -254,7 +254,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get transitory => 'انتقالي';
 
   @override
-  String get bin => 'صندوق';
+  String get bin => 'الصندوق';
 
   @override
   String get enterBin => 'أدخل الصندوق';
@@ -554,7 +554,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get grpo => 'استلام بضاعة';
 
   @override
-  String get packOfStorage => 'حزمة التخزين';
+  String get packOfStorage => 'التعبئة للتخزين';
 
   @override
   String get putAway => 'وضع بعيدا';
@@ -909,4 +909,109 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get startPacking => 'بدء التعبئة';
+
+  @override
+  String get fromBins => 'من الصناديق';
+
+  @override
+  String get toBin => 'إلى الصندوق';
+
+  @override
+  String get proceed => 'متابعة';
+
+  @override
+  String get binWarehouse => 'مستودع الصناديق';
+
+  @override
+  String get toBins => 'إلى الصناديق';
+
+  @override
+  String get cartonId => 'معرف الكرتون';
+
+  @override
+  String get batches => 'الدفعات';
+
+  @override
+  String get attribute1 => 'السمة 1';
+
+  @override
+  String get filter => 'تصفية';
+
+  @override
+  String get multiSelect => 'تحديد متعدد';
+
+  @override
+  String get searchRoles => 'البحث عن الأدوار بالاسم...';
+
+  @override
+  String get noRolesFound => 'لم يتم العثور على أدوار';
+
+  @override
+  String get editPermissions => 'تعديل الصلاحيات';
+
+  @override
+  String get permissionsFor => 'صلاحيات';
+
+  @override
+  String get permissionModules => 'وحدات الصلاحيات';
+
+  @override
+  String get grantAccess => 'منح الوصول';
+
+  @override
+  String get revokeAccess => 'إلغاء الوصول';
+
+  @override
+  String get representative => 'ممثل';
+
+  @override
+  String get warehouseKeeper => 'أمين مستودع';
+
+  @override
+  String get clerk => 'كاتب';
+
+  @override
+  String get wClerk => 'كاتب مستودع';
+
+  @override
+  String get customRole => 'دور مخصص';
+
+  @override
+  String get permissionsUpdated => 'تم تحديث الصلاحيات بنجاح';
+
+  @override
+  String get returnToVendorPermission => 'الإرجاع للمورد';
+
+  @override
+  String get deliveryToCustomerPermission => 'التسليم للعميل';
+
+  @override
+  String get returnFromCustomerPermission => 'الإرجاع من العميل';
+
+  @override
+  String get inventoryTransferPermission => 'نقل المخزون';
+
+  @override
+  String get inventoryTransferInPermission => 'نقل المخزون للداخل';
+
+  @override
+  String get inventoryMovePermission => 'حركة المخزون';
+
+  @override
+  String get goodReceiptsPermission => 'استلام البضائع';
+
+  @override
+  String get goodIssuePermission => 'صرف البضائع';
+
+  @override
+  String get transactionsPermission => 'المعاملات';
+
+  @override
+  String get administrationPermission => 'الإدارة';
+
+  @override
+  String get synchronizationPermission => 'المزامنة';
+
+  @override
+  String get receivingFromVendorPermission => 'الاستلام من المورد';
 }

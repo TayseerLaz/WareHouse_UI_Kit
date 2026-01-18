@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
 import 'packaging_screen.dart';
 import 'pack_for_storage_list_screen.dart';
+import 'put_away_screen.dart';
 
 class ReceivingFromVendorScreen extends StatelessWidget {
   const ReceivingFromVendorScreen({super.key});
@@ -94,8 +95,11 @@ class ReceivingFromVendorScreen extends StatelessWidget {
                     icon: Icons.move_to_inbox_outlined,
                     color: const Color(0xFF155096),
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('${localizations.putAway} - Coming Soon')),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PutAwayScreen(),
+                        ),
                       );
                     },
                   ),

@@ -83,9 +83,7 @@ class AdministrationScreen extends StatelessWidget {
                     title: localizations.authorizations,
                     onTap: () {
                       // Navigate to Authorizations screen
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('${localizations.authorizations} - Coming Soon')),
-                      );
+                      Navigator.pushNamed(context, '/authorizations');
                     },
                   ),
                   const SizedBox(height: 16),

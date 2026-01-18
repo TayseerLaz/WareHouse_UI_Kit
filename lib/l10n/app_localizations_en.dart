@@ -554,7 +554,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get grpo => 'GRPO';
 
   @override
-  String get packOfStorage => 'Pack of Storage';
+  String get packOfStorage => 'Pack for Storage';
 
   @override
   String get putAway => 'Put Away';
@@ -698,7 +698,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get prodDate => 'Prod Date';
 
   @override
-  String get expDate => 'Exp Date';
+  String get expDate => 'ExpDate';
 
   @override
   String get noBatchesAdded => 'No batches added yet';
@@ -910,4 +910,109 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startPacking => 'Start Packing';
+
+  @override
+  String get fromBins => 'From Bins';
+
+  @override
+  String get toBin => 'To Bin';
+
+  @override
+  String get proceed => 'Proceed';
+
+  @override
+  String get binWarehouse => 'Bin Warehouse';
+
+  @override
+  String get toBins => 'To Bins';
+
+  @override
+  String get cartonId => 'Carton ID';
+
+  @override
+  String get batches => 'Batches';
+
+  @override
+  String get attribute1 => 'Attribute1';
+
+  @override
+  String get filter => 'Filter';
+
+  @override
+  String get multiSelect => 'Multi-Select';
+
+  @override
+  String get searchRoles => 'Search roles by name...';
+
+  @override
+  String get noRolesFound => 'No roles found';
+
+  @override
+  String get editPermissions => 'Edit Permissions';
+
+  @override
+  String get permissionsFor => 'Permissions for';
+
+  @override
+  String get permissionModules => 'Permission Modules';
+
+  @override
+  String get grantAccess => 'Grant Access';
+
+  @override
+  String get revokeAccess => 'Revoke Access';
+
+  @override
+  String get representative => 'Representative';
+
+  @override
+  String get warehouseKeeper => 'Warehouse-keeper';
+
+  @override
+  String get clerk => 'Clerk';
+
+  @override
+  String get wClerk => 'w-clerk';
+
+  @override
+  String get customRole => 'Custom Role';
+
+  @override
+  String get permissionsUpdated => 'Permissions updated successfully';
+
+  @override
+  String get returnToVendorPermission => 'Return To Vendor';
+
+  @override
+  String get deliveryToCustomerPermission => 'Delivery To Customer';
+
+  @override
+  String get returnFromCustomerPermission => 'Return From Customer';
+
+  @override
+  String get inventoryTransferPermission => 'Inventory Transfer';
+
+  @override
+  String get inventoryTransferInPermission => 'Inventory Transfer In';
+
+  @override
+  String get inventoryMovePermission => 'Inventory Move';
+
+  @override
+  String get goodReceiptsPermission => 'Good Receipts';
+
+  @override
+  String get goodIssuePermission => 'Good Issue';
+
+  @override
+  String get transactionsPermission => 'Transactions';
+
+  @override
+  String get administrationPermission => 'Administration';
+
+  @override
+  String get synchronizationPermission => 'Synchronization';
+
+  @override
+  String get receivingFromVendorPermission => 'Receiving From Vendor';
 }
