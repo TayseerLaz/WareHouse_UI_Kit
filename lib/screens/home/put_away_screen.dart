@@ -12,7 +12,7 @@ class PutAwayScreen extends StatefulWidget {
 
 class _PutAwayScreenState extends State<PutAwayScreen> {
   String _selectedWarehouse = 'Bin Warehouse';
-  String _fromBin = '05-A1-S1-L2';
+  String _fromBin = '07-B3-S2-L1'; // Changed to match first item in _availableBins
   String? _selectedToBin;
 
   final List<String> _warehouses = [

@@ -92,8 +92,8 @@ class AdministrationScreen extends StatelessWidget {
                     icon: Icons.business_outlined,
                     title: localizations.companySettingsMenu,
                     onTap: () {
-                      // Navigate to Company Settings (Profile Screen)
-                      Navigator.pushNamed(context, '/profile');
+                      // Navigate to Company Settings
+                      Navigator.pushNamed(context, '/company_settings');
                     },
                   ),
                   const SizedBox(height: 16),

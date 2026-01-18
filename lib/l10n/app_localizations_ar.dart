@@ -1014,4 +1014,121 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get receivingFromVendorPermission => 'الاستلام من المورد';
+
+  @override
+  String get companyManagement => 'إدارة الشركات';
+
+  @override
+  String get searchCompanies => 'البحث عن الشركات بالاسم...';
+
+  @override
+  String get noCompaniesFound => 'لم يتم العثور على شركات';
+
+  @override
+  String get addCompany => 'إضافة شركة';
+
+  @override
+  String get editCompany => 'تعديل الشركة';
+
+  @override
+  String get deleteCompany => 'حذف الشركة';
+
+  @override
+  String get syncCompany => 'مزامنة الشركة';
+
+  @override
+  String get companyCode => 'كود الشركة';
+
+  @override
+  String get enterCompanyCode => 'أدخل كود الشركة';
+
+  @override
+  String get databaseConfiguration => 'إعدادات قاعدة البيانات';
+
+  @override
+  String get connectionDatabase => 'قاعدة البيانات';
+
+  @override
+  String get enterDatabaseName => 'أدخل اسم قاعدة البيانات';
+
+  @override
+  String get connectionServer => 'خادم الاتصال';
+
+  @override
+  String get enterServerAddress => 'أدخل عنوان الخادم';
+
+  @override
+  String get connectionUsername => 'اسم مستخدم الاتصال';
+
+  @override
+  String get enterUsername => 'أدخل اسم المستخدم';
+
+  @override
+  String get connectionPassword => 'كلمة مرور الاتصال';
+
+  @override
+  String get enterConnectionPassword => 'أدخل كلمة مرور الاتصال';
+
+  @override
+  String get connectionPort => 'منفذ الاتصال';
+
+  @override
+  String get enterPort => 'أدخل المنفذ';
+
+  @override
+  String get databaseType => 'نوع قاعدة البيانات';
+
+  @override
+  String get selectDatabaseType => 'اختر نوع قاعدة البيانات';
+
+  @override
+  String get sqlServer => 'SQL Server';
+
+  @override
+  String get mysql => 'MySQL';
+
+  @override
+  String get postgresql => 'PostgreSQL';
+
+  @override
+  String get oracle => 'Oracle';
+
+  @override
+  String get erpIntegration => 'تكامل ERP';
+
+  @override
+  String get erpUser => 'مستخدم ERP';
+
+  @override
+  String get enterErpUser => 'أدخل مستخدم ERP';
+
+  @override
+  String get erpPassword => 'كلمة مرور ERP';
+
+  @override
+  String get enterErpPassword => 'أدخل كلمة مرور ERP';
+
+  @override
+  String get erpAddress => 'عنوان ERP';
+
+  @override
+  String get enterErpAddress => 'أدخل عنوان/نقطة نهاية ERP';
+
+  @override
+  String get companySaved => 'تم حفظ الشركة بنجاح';
+
+  @override
+  String get companyDeleted => 'تم حذف الشركة بنجاح';
+
+  @override
+  String get companySynced => 'تمت مزامنة الشركة بنجاح';
+
+  @override
+  String get confirmDeleteCompany => 'هل أنت متأكد من حذف هذه الشركة؟';
+
+  @override
+  String get pleaseEnterCompanyCode => 'يرجى إدخال كود الشركة';
+
+  @override
+  String get companyInformation => 'معلومات الشركة';
 }

@@ -20,6 +20,8 @@ import '../screens/admin/import_screen.dart';
 import '../screens/admin/export_screen.dart';
 import '../screens/admin/authorizations/authorizations_screen.dart';
 import '../screens/admin/authorizations/authorization_details_screen.dart';
+import '../screens/admin/company/company_settings_screen.dart';
+import '../screens/admin/company/company_form_screen.dart';
 
 /// App Routes Configuration
 /// Centralized route management for the entire application
@@ -46,6 +48,8 @@ class AppRoutes {
   static const String exportData = '/export';
   static const String authorizations = '/authorizations';
   static const String authorizationDetails = '/authorization_details';
+  static const String companySettings = '/company_settings';
+  static const String companyForm = '/company_form';
 
   /// Route generator
   static Map<String, WidgetBuilder> get routes => {
@@ -69,5 +73,7 @@ class AppRoutes {
         exportData: (context) => const ExportScreen(),
         authorizations: (context) => const AuthorizationsScreen(),
         authorizationDetails: (context) => const AuthorizationDetailsScreen(),
+        companySettings: (context) => const CompanySettingsScreen(),
+        companyForm: (context) => const CompanyFormScreen(),
       };
 }

@@ -235,7 +235,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get company => 'Company';
 
   @override
-  String get selectCompany => 'Select company';
+  String get selectCompany => 'Select Company';
 
   @override
   String get warehouse => 'Warehouse';
@@ -1015,4 +1015,122 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get receivingFromVendorPermission => 'Receiving From Vendor';
+
+  @override
+  String get companyManagement => 'Company Management';
+
+  @override
+  String get searchCompanies => 'Search companies by name...';
+
+  @override
+  String get noCompaniesFound => 'No companies found';
+
+  @override
+  String get addCompany => 'Add Company';
+
+  @override
+  String get editCompany => 'Edit Company';
+
+  @override
+  String get deleteCompany => 'Delete Company';
+
+  @override
+  String get syncCompany => 'Sync Company';
+
+  @override
+  String get companyCode => 'Company Code';
+
+  @override
+  String get enterCompanyCode => 'Enter company code';
+
+  @override
+  String get databaseConfiguration => 'Database Configuration';
+
+  @override
+  String get connectionDatabase => 'Connection Database';
+
+  @override
+  String get enterDatabaseName => 'Enter database name';
+
+  @override
+  String get connectionServer => 'Connection Server';
+
+  @override
+  String get enterServerAddress => 'Enter server address';
+
+  @override
+  String get connectionUsername => 'Connection Username';
+
+  @override
+  String get enterUsername => 'Enter username';
+
+  @override
+  String get connectionPassword => 'Connection Password';
+
+  @override
+  String get enterConnectionPassword => 'Enter connection password';
+
+  @override
+  String get connectionPort => 'Connection Port';
+
+  @override
+  String get enterPort => 'Enter port';
+
+  @override
+  String get databaseType => 'Database Type';
+
+  @override
+  String get selectDatabaseType => 'Select database type';
+
+  @override
+  String get sqlServer => 'SQL Server';
+
+  @override
+  String get mysql => 'MySQL';
+
+  @override
+  String get postgresql => 'PostgreSQL';
+
+  @override
+  String get oracle => 'Oracle';
+
+  @override
+  String get erpIntegration => 'ERP Integration';
+
+  @override
+  String get erpUser => 'ERP User';
+
+  @override
+  String get enterErpUser => 'Enter ERP user';
+
+  @override
+  String get erpPassword => 'ERP Password';
+
+  @override
+  String get enterErpPassword => 'Enter ERP password';
+
+  @override
+  String get erpAddress => 'ERP Address';
+
+  @override
+  String get enterErpAddress => 'Enter ERP address/endpoint';
+
+  @override
+  String get companySaved => 'Company saved successfully';
+
+  @override
+  String get companyDeleted => 'Company deleted successfully';
+
+  @override
+  String get companySynced => 'Company synced successfully';
+
+  @override
+  String get confirmDeleteCompany =>
+      'Are you sure you want to delete this company?';
+
+  @override
+  String get pleaseEnterCompanyCode => 'Please enter company code';
+
+  @override
+  String get companyInformation => 'Company Information';
 }

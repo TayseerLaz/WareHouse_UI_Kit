@@ -9,26 +9,45 @@ class AuthorizationDetailsScreen extends StatefulWidget {
 }
 
 class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen> {
-  // Permission state management
-  final Map<String, bool> _permissions = {
-    'administration': false,
-    'synchronization': false,
-    'receivingFromVendor': false,
-    'returnToVendor': false,
-    'deliveryToCustomer': false,
-    'returnFromCustomer': false,
-    'inventoryTransfer': false,
-    'inventoryTransferIn': false,
-    'inventoryMove': false,
-    'goodReceipts': false,
-    'goodIssue': false,
-    'transactions': false,
+  // Permission state management - now with sub-permissions
+  final Map<String, Map<String, bool>> _permissions = {
+    'administration': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'synchronization': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'receivingFromVendor': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'returnToVendor': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'deliveryToCustomer': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'returnFromCustomer': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'inventoryTransfer': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'inventoryTransferIn': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'inventoryMove': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'goodReceipts': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'goodIssue': {'create': false, 'view': false, 'edit': false, 'delete': false},
+    'transactions': {'create': false, 'view': false, 'edit': false, 'delete': false},
   };
 
-  void _togglePermission(String key) {
+  void _toggleSubPermission(String moduleKey, String action) {
     setState(() {
-      _permissions[key] = !_permissions[key]!;
+      _permissions[moduleKey]![action] = !_permissions[moduleKey]![action]!;
     });
+  }
+
+  void _toggleAllSubPermissions(String moduleKey, bool value) {
+    setState(() {
+      _permissions[moduleKey]!['create'] = value;
+      _permissions[moduleKey]!['view'] = value;
+      _permissions[moduleKey]!['edit'] = value;
+      _permissions[moduleKey]!['delete'] = value;
+    });
+  }
+
+  bool _hasAnyPermission(String moduleKey) {
+    final perms = _permissions[moduleKey]!;
+    return perms['create']! || perms['view']! || perms['edit']! || perms['delete']!;
+  }
+
+  bool _hasAllPermissions(String moduleKey) {
+    final perms = _permissions[moduleKey]!;
+    return perms['create']! && perms['view']! && perms['edit']! && perms['delete']!;
   }
 
   void _updatePermissions() {
@@ -255,7 +274,8 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
   }
 
   Widget _buildPermissionCard(String title, String key, IconData icon) {
-    final isGranted = _permissions[key] ?? false;
+    final hasAnyPermission = _hasAnyPermission(key);
+    final hasAllPermissions = _hasAllPermissions(key);
 
     return Container(
       decoration: BoxDecoration(
@@ -273,14 +293,14 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
         leading: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: isGranted
+            color: hasAnyPermission
                 ? const Color(0xFF155096).withValues(alpha: 0.1)
                 : Colors.grey.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(
             icon,
-            color: isGranted ? const Color(0xFF155096) : Colors.grey,
+            color: hasAnyPermission ? const Color(0xFF155096) : Colors.grey,
             size: 24,
           ),
         ),
@@ -293,8 +313,11 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
           ),
         ),
         trailing: Checkbox(
-          value: isGranted,
-          onChanged: (value) => _togglePermission(key),
+          value: hasAllPermissions,
+          tristate: true,
+          onChanged: (value) {
+            _toggleAllSubPermissions(key, value ?? false);
+          },
           activeColor: const Color(0xFF155096),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
@@ -307,10 +330,10 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
               children: [
                 const Divider(),
                 const SizedBox(height: 8),
-                _buildSubPermission('Create', key),
-                _buildSubPermission('View', key),
-                _buildSubPermission('Edit', key),
-                _buildSubPermission('Delete', key),
+                _buildSubPermission('Create', key, 'create'),
+                _buildSubPermission('View', key, 'view'),
+                _buildSubPermission('Edit', key, 'edit'),
+                _buildSubPermission('Delete', key, 'delete'),
               ],
             ),
           ),
@@ -319,8 +342,8 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
     );
   }
 
-  Widget _buildSubPermission(String action, String parentKey) {
-    final isParentGranted = _permissions[parentKey] ?? false;
+  Widget _buildSubPermission(String label, String moduleKey, String action) {
+    final isGranted = _permissions[moduleKey]![action] ?? false;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
@@ -334,16 +357,16 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
           const SizedBox(width: 8),
           Expanded(
             child: Text(
-              action,
-              style: TextStyle(
+              label,
+              style: const TextStyle(
                 fontSize: 14,
-                color: isParentGranted ? const Color(0xFF262626) : Colors.grey,
+                color: Color(0xFF262626),
               ),
             ),
           ),
           Checkbox(
-            value: isParentGranted,
-            onChanged: isParentGranted ? (value) {} : null,
+            value: isGranted,
+            onChanged: (value) => _toggleSubPermission(moduleKey, action),
             activeColor: const Color(0xFF155096),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),

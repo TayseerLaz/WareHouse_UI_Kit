@@ -545,7 +545,7 @@ abstract class AppLocalizations {
   /// No description provided for @selectCompany.
   ///
   /// In en, this message translates to:
-  /// **'Select company'**
+  /// **'Select Company'**
   String get selectCompany;
 
   /// No description provided for @warehouse.
@@ -2095,6 +2095,240 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Receiving From Vendor'**
   String get receivingFromVendorPermission;
+
+  /// No description provided for @companyManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'Company Management'**
+  String get companyManagement;
+
+  /// No description provided for @searchCompanies.
+  ///
+  /// In en, this message translates to:
+  /// **'Search companies by name...'**
+  String get searchCompanies;
+
+  /// No description provided for @noCompaniesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No companies found'**
+  String get noCompaniesFound;
+
+  /// No description provided for @addCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Company'**
+  String get addCompany;
+
+  /// No description provided for @editCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Company'**
+  String get editCompany;
+
+  /// No description provided for @deleteCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Company'**
+  String get deleteCompany;
+
+  /// No description provided for @syncCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync Company'**
+  String get syncCompany;
+
+  /// No description provided for @companyCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Company Code'**
+  String get companyCode;
+
+  /// No description provided for @enterCompanyCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter company code'**
+  String get enterCompanyCode;
+
+  /// No description provided for @databaseConfiguration.
+  ///
+  /// In en, this message translates to:
+  /// **'Database Configuration'**
+  String get databaseConfiguration;
+
+  /// No description provided for @connectionDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection Database'**
+  String get connectionDatabase;
+
+  /// No description provided for @enterDatabaseName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter database name'**
+  String get enterDatabaseName;
+
+  /// No description provided for @connectionServer.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection Server'**
+  String get connectionServer;
+
+  /// No description provided for @enterServerAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter server address'**
+  String get enterServerAddress;
+
+  /// No description provided for @connectionUsername.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection Username'**
+  String get connectionUsername;
+
+  /// No description provided for @enterUsername.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter username'**
+  String get enterUsername;
+
+  /// No description provided for @connectionPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection Password'**
+  String get connectionPassword;
+
+  /// No description provided for @enterConnectionPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter connection password'**
+  String get enterConnectionPassword;
+
+  /// No description provided for @connectionPort.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection Port'**
+  String get connectionPort;
+
+  /// No description provided for @enterPort.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter port'**
+  String get enterPort;
+
+  /// No description provided for @databaseType.
+  ///
+  /// In en, this message translates to:
+  /// **'Database Type'**
+  String get databaseType;
+
+  /// No description provided for @selectDatabaseType.
+  ///
+  /// In en, this message translates to:
+  /// **'Select database type'**
+  String get selectDatabaseType;
+
+  /// No description provided for @sqlServer.
+  ///
+  /// In en, this message translates to:
+  /// **'SQL Server'**
+  String get sqlServer;
+
+  /// No description provided for @mysql.
+  ///
+  /// In en, this message translates to:
+  /// **'MySQL'**
+  String get mysql;
+
+  /// No description provided for @postgresql.
+  ///
+  /// In en, this message translates to:
+  /// **'PostgreSQL'**
+  String get postgresql;
+
+  /// No description provided for @oracle.
+  ///
+  /// In en, this message translates to:
+  /// **'Oracle'**
+  String get oracle;
+
+  /// No description provided for @erpIntegration.
+  ///
+  /// In en, this message translates to:
+  /// **'ERP Integration'**
+  String get erpIntegration;
+
+  /// No description provided for @erpUser.
+  ///
+  /// In en, this message translates to:
+  /// **'ERP User'**
+  String get erpUser;
+
+  /// No description provided for @enterErpUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter ERP user'**
+  String get enterErpUser;
+
+  /// No description provided for @erpPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'ERP Password'**
+  String get erpPassword;
+
+  /// No description provided for @enterErpPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter ERP password'**
+  String get enterErpPassword;
+
+  /// No description provided for @erpAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'ERP Address'**
+  String get erpAddress;
+
+  /// No description provided for @enterErpAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter ERP address/endpoint'**
+  String get enterErpAddress;
+
+  /// No description provided for @companySaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Company saved successfully'**
+  String get companySaved;
+
+  /// No description provided for @companyDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Company deleted successfully'**
+  String get companyDeleted;
+
+  /// No description provided for @companySynced.
+  ///
+  /// In en, this message translates to:
+  /// **'Company synced successfully'**
+  String get companySynced;
+
+  /// No description provided for @confirmDeleteCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this company?'**
+  String get confirmDeleteCompany;
+
+  /// No description provided for @pleaseEnterCompanyCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter company code'**
+  String get pleaseEnterCompanyCode;
+
+  /// No description provided for @companyInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'Company Information'**
+  String get companyInformation;
 }
 
 class _AppLocalizationsDelegate
