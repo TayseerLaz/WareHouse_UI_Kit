@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import '../../providers/theme_provider.dart';
+import '../../widgets/common/notification.dart';
 
 
 import '../../l10n/app_localizations.dart';
@@ -247,8 +248,10 @@ class SettingsScreen extends StatelessWidget {
                     height: 56,
                     child: ElevatedButton(
                       onPressed: () {
-                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text(localizations.settingsUpdated)),
+                        AppNotification.showNewSales(
+                          context,
+                          title: 'Success',
+                          subtitle: localizations.settingsUpdated,
                         );
                       },
                       style: ElevatedButton.styleFrom(

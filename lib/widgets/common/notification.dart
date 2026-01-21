@@ -61,9 +61,9 @@ class NotificationCard extends StatelessWidget {
           // Background
           Positioned.fill(
             child: Container(
-              decoration: const ShapeDecoration(
-                color: Color(0xFF155096), // Theme color
-                shape: RoundedRectangleBorder(
+              decoration: ShapeDecoration(
+                color: Theme.of(context).primaryColor,
+                shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40),
                     bottomRight: Radius.circular(40),

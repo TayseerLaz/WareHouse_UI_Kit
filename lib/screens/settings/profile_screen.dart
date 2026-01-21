@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
+import '../../widgets/common/notification.dart';
 
 
 class ProfileScreen extends StatelessWidget {
@@ -91,8 +92,10 @@ class ProfileScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         // Update logic
-                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text(localizations.profileUpdated)),
+                        AppNotification.showNewSales(
+                          context,
+                          title: 'Success',
+                          subtitle: localizations.profileUpdated,
                         );
                       },
                       style: ElevatedButton.styleFrom(
