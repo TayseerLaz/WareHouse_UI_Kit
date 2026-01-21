@@ -54,10 +54,13 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Icon(
-                    Icons.notifications_outlined,
-                    color: Colors.white,
-                    size: 24,
+                  GestureDetector(
+                    onTap: () => Navigator.pushNamed(context, '/notifications'),
+                    child: const Icon(
+                      Icons.notifications_outlined,
+                      color: Colors.white,
+                      size: 24,
+                    ),
                   ),
                 ],
               ),
