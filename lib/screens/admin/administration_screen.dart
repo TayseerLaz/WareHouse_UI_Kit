@@ -6,7 +6,7 @@ class AdministrationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -22,9 +22,9 @@ class AdministrationScreen extends StatelessWidget {
               top: 60, // Safe area equivalent + padding
               bottom: 40, // Extra length as requested
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -147,10 +147,10 @@ class AdministrationScreen extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF155096).withValues(alpha: 0.1),
+                    color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Icon(icon, color: const Color(0xFF155096), size: 28),
+                  child: Icon(icon, color: Theme.of(context).primaryColor, size: 28),
                 ),
                 const SizedBox(width: 20),
                 Expanded(

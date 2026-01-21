@@ -9,6 +9,7 @@ class ScreenSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
+    final themeColor = Theme.of(context).primaryColor;
 
     return Scaffold(
       backgroundColor: const Color(0xFFE8F0FB),
@@ -21,10 +22,10 @@ class ScreenSelector extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               // Title
-              const Text(
+              Text(
                 'SAPWAVES UI Kit',
                 style: TextStyle(
-                  color: Color(0xFF155096),
+                  color: themeColor,
                   fontSize: 32,
                   fontWeight: FontWeight.w700,
                 ),
@@ -116,12 +117,12 @@ class ScreenSelector extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF155096).withValues(alpha: 0.1),
+                            color: themeColor.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: const Icon(
+                          child: Icon(
                             Icons.language,
-                            color: Color(0xFF155096),
+                            color: themeColor,
                             size: 24,
                           ),
                         ),
@@ -158,7 +159,7 @@ class ScreenSelector extends StatelessWidget {
                         final themeProvider = Provider.of<ThemeProvider>(context, listen: false);
                         themeProvider.updateLocale(value ? const Locale('ar') : const Locale('en'));
                       },
-                      activeColor: const Color(0xFF155096),
+                      activeColor: themeColor,
                     ),
                   ],
                 ),
@@ -198,6 +199,7 @@ class ScreenSelector extends StatelessWidget {
     required IconData icon,
     required String route,
   }) {
+    final themeColor = Theme.of(context).primaryColor;
     return Material(
       color: Colors.transparent,
       child: InkWell(
@@ -223,12 +225,12 @@ class ScreenSelector extends StatelessWidget {
                 width: 56,
                 height: 56,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF155096).withValues(alpha: 0.1),
+                  color: themeColor.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
                   icon,
-                  color: const Color(0xFF155096),
+                  color: themeColor,
                   size: 28,
                 ),
               ),
@@ -257,9 +259,9 @@ class ScreenSelector extends StatelessWidget {
                   ],
                 ),
               ),
-              const Icon(
+              Icon(
                 Icons.arrow_forward_ios,
-                color: Color(0xFF155096),
+                color: themeColor,
                 size: 20,
               ),
             ],

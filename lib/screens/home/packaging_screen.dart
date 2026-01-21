@@ -163,7 +163,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -179,9 +179,9 @@ class _PackagingScreenState extends State<PackagingScreen> {
               top: 60,
               bottom: 20,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -336,7 +336,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
                 if (_selectionMode) ...[
                   Row(
                     children: [
-                      const Icon(Icons.touch_app, color: Color(0xFF155096), size: 20),
+                      Icon(Icons.touch_app, color: themeColor, size: 20),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Text(
@@ -351,7 +351,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF155096),
+                          color: themeColor,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(
@@ -392,7 +392,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
                             );
                           },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _selectionMode ? const Color(0xFF155096) : themeColor,
+                      backgroundColor: _selectionMode ? themeColor : themeColor,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -427,6 +427,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
   }
 
   Widget _buildCartonCard(Map<String, dynamic> carton, int index, AppLocalizations localizations) {
+    final themeColor = Theme.of(context).primaryColor;
     final isPrinted = carton['isPrinted'] as bool;
     final items = carton['items'] as List<Map<String, dynamic>>;
 
@@ -670,7 +671,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
                   icon: const Icon(Icons.print, size: 18),
                   label: Text(localizations.print),
                   style: TextButton.styleFrom(
-                    foregroundColor: const Color(0xFF155096),
+                    foregroundColor: themeColor,
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   ),
                 ),
@@ -741,6 +742,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
   }
 
   Widget _buildItemCard(Map<String, dynamic> item, int cartonIndex, int itemIndex, AppLocalizations localizations) {
+    final themeColor = Theme.of(context).primaryColor;
     final isPrinted = item['isPrinted'] as bool;
 
     return Container(
@@ -785,7 +787,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
                   },
                   fillColor: WidgetStateProperty.resolveWith((states) {
                     if (states.contains(WidgetState.selected)) {
-                      return const Color(0xFF155096);
+                      return themeColor;
                     }
                     return null;
                   }),
@@ -795,7 +797,7 @@ class _PackagingScreenState extends State<PackagingScreen> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF155096).withValues(alpha: 0.1),
+                  color: themeColor.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Icon(

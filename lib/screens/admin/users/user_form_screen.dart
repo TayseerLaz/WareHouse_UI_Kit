@@ -55,7 +55,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
     final isEditing = widget.user != null;
 
@@ -72,9 +72,9 @@ class _UserFormScreenState extends State<UserFormScreen> {
               top: 60,
               bottom: 30,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),

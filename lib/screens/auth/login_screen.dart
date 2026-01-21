@@ -75,26 +75,27 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
     final size = MediaQuery.of(context).size;
+    final themeColor = Theme.of(context).primaryColor;
 
     return Scaffold(
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF4A5FBF),
-              Color(0xFF5B73D9),
-              Color(0xFF6B86E8),
+              themeColor,
+              themeColor.withValues(alpha: 0.8),
+              themeColor.withValues(alpha: 0.6),
             ],
           ),
         ),
         child: Stack(
           children: [
             // Decorative circles/spheres
-            _buildDecorativeCircles(),
+            _buildDecorativeCircles(themeColor),
             
             // Main content
             SafeArea(
@@ -112,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(height: 40),
                       
                       // White card with login form
-                      _buildLoginCard(localizations),
+                      _buildLoginCard(localizations, themeColor),
                       
                       SizedBox(height: size.height * 0.05),
                     ],
@@ -126,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildDecorativeCircles() {
+  Widget _buildDecorativeCircles(Color themeColor) {
     return Stack(
       children: [
         // Top left dark circle
@@ -138,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 150,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: const Color(0xFF2D3E8F).withValues(alpha: 0.5),
+              color: Colors.black.withValues(alpha: 0.1),
             ),
           ),
         ),
@@ -177,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 200,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: const Color(0xFF2D3E8F).withValues(alpha: 0.4),
+              color: Colors.black.withValues(alpha: 0.1),
             ),
           ),
         ),
@@ -231,7 +232,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildLoginCard(AppLocalizations localizations) {
+  Widget _buildLoginCard(AppLocalizations localizations, Color themeColor) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(32),
@@ -278,7 +279,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           _rememberMe = value ?? false;
                         });
                       },
-                      activeColor: const Color(0xFF4A5FBF),
+                      activeColor: themeColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
                       ),
@@ -302,8 +303,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
                 child: Text(
                   localizations.forgotPassword,
-                  style: const TextStyle(
-                    color: Color(0xFF4A5FBF),
+                  style: TextStyle(
+                    color: themeColor,
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
@@ -328,7 +329,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF4A5FBF),
+                backgroundColor: themeColor,
                 foregroundColor: Colors.white,
                 elevation: 0,
                 shape: RoundedRectangleBorder(
@@ -368,12 +369,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: 56,
                   height: 56,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF4A5FBF).withValues(alpha: 0.1),
+                    color: themeColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.fingerprint,
-                    color: Color(0xFF4A5FBF),
+                    color: themeColor,
                     size: 32,
                   ),
                 ),
@@ -422,8 +423,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Text(
                     localizations.signUp,
-                    style: const TextStyle(
-                      color: Color(0xFF4A5FBF),
+                    style: TextStyle(
+                      color: themeColor,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                     ),

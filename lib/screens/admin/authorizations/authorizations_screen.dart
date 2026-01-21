@@ -33,7 +33,7 @@ class _AuthorizationsScreenState extends State<AuthorizationsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -49,9 +49,9 @@ class _AuthorizationsScreenState extends State<AuthorizationsScreen> {
               top: 60,
               bottom: 30,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -91,7 +91,7 @@ class _AuthorizationsScreenState extends State<AuthorizationsScreen> {
                     decoration: InputDecoration(
                       hintText: localizations.searchRoles,
                       hintStyle: const TextStyle(color: Color(0xFF999999)),
-                      prefixIcon: const Icon(Icons.search, color: Color(0xFF155096)),
+                      prefixIcon: Icon(Icons.search, color: themeColor),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -165,12 +165,12 @@ class _AuthorizationsScreenState extends State<AuthorizationsScreen> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF155096).withValues(alpha: 0.1),
+                    color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
                     Icons.person_outline,
-                    color: const Color(0xFF155096),
+                    color: Theme.of(context).primaryColor,
                     size: 28,
                   ),
                 ),
@@ -190,12 +190,12 @@ class _AuthorizationsScreenState extends State<AuthorizationsScreen> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF155096).withValues(alpha: 0.1),
+                    color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.edit_note_outlined,
-                    color: Color(0xFF155096),
+                    color: Theme.of(context).primaryColor,
                     size: 24,
                   ),
                 ),

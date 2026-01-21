@@ -7,7 +7,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -24,9 +24,9 @@ class ProfileScreen extends StatelessWidget {
               top: 60, // Safe area equivalent + padding
               bottom: 40 // Extra length as requested
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -58,29 +58,29 @@ class ProfileScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                    // --- General Section ---
-                   _buildSectionHeader(localizations.general),
+                   _buildSectionHeader(localizations.general, context),
                    const SizedBox(height: 16),
-                   _buildInputField(localizations.company, localizations.selectCompany),
+                   _buildInputField(localizations.company, localizations.selectCompany, context),
                    const SizedBox(height: 12),
-                   _buildInputField(localizations.warehouse, localizations.selectWarehouse),
+                   _buildInputField(localizations.warehouse, localizations.selectWarehouse, context),
                    const SizedBox(height: 12),
-                   _buildInputField(localizations.binId, localizations.enterBinId),
+                   _buildInputField(localizations.binId, localizations.enterBinId, context),
                    
                    const SizedBox(height: 32),
 
                   // --- Transitory Section ---
-                  _buildSectionHeader(localizations.transitory),
+                  _buildSectionHeader(localizations.transitory, context),
                   const SizedBox(height: 16),
-                  _buildInputField(localizations.warehouse, localizations.selectWarehouse),
+                  _buildInputField(localizations.warehouse, localizations.selectWarehouse, context),
                   const SizedBox(height: 12),
-                  _buildInputField(localizations.bin, localizations.enterBin),
+                  _buildInputField(localizations.bin, localizations.enterBin, context),
 
                   const SizedBox(height: 32),
 
                   // --- Inbound Section ---
-                  _buildSectionHeader(localizations.inbound),
+                  _buildSectionHeader(localizations.inbound, context),
                   const SizedBox(height: 16),
-                  _buildInputField(localizations.warehouse, localizations.selectWarehouse),
+                  _buildInputField(localizations.warehouse, localizations.selectWarehouse, context),
 
                   const SizedBox(height: 48),
 
@@ -122,18 +122,18 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSectionHeader(String title) {
+  Widget _buildSectionHeader(String title, BuildContext context) {
     return Text(
       title,
-      style: const TextStyle(
-        color: Color(0xFF155096),
+      style: TextStyle(
+        color: Theme.of(context).primaryColor,
         fontSize: 20,
         fontWeight: FontWeight.w700,
       ),
     );
   }
 
-  Widget _buildInputField(String label, String placeholder) {
+  Widget _buildInputField(String label, String placeholder, BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -173,7 +173,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(color: Color(0xFF155096), width: 1.5),
+                borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 1.5),
               ),
             ),
           ),

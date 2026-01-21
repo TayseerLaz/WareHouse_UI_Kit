@@ -17,7 +17,7 @@ class GRPODetailsScreen extends StatefulWidget {
 class _GRPODetailsScreenState extends State<GRPODetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     // Mock item data for the PO
@@ -61,9 +61,9 @@ class _GRPODetailsScreenState extends State<GRPODetailsScreen> {
               top: 60,
               bottom: 20,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),

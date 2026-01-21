@@ -88,7 +88,7 @@ class _CompanySettingsScreenState extends State<CompanySettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -104,9 +104,9 @@ class _CompanySettingsScreenState extends State<CompanySettingsScreen> {
               top: 60,
               bottom: 30,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -146,7 +146,7 @@ class _CompanySettingsScreenState extends State<CompanySettingsScreen> {
                     decoration: InputDecoration(
                       hintText: localizations.searchCompanies,
                       hintStyle: const TextStyle(color: Color(0xFF999999)),
-                      prefixIcon: const Icon(Icons.search, color: Color(0xFF155096)),
+                      prefixIcon: Icon(Icons.search, color: themeColor),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -212,7 +212,7 @@ class _CompanySettingsScreenState extends State<CompanySettingsScreen> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: isActive
-            ? Border.all(color: const Color(0xFF155096), width: 2)
+            ? Border.all(color: Theme.of(context).primaryColor, width: 2)
             : null,
         boxShadow: [
           BoxShadow(
@@ -233,12 +233,12 @@ class _CompanySettingsScreenState extends State<CompanySettingsScreen> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF155096).withValues(alpha: 0.1),
+                    color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.business_outlined,
-                    color: Color(0xFF155096),
+                    color: Theme.of(context).primaryColor,
                     size: 28,
                   ),
                 ),
@@ -311,7 +311,7 @@ class _CompanySettingsScreenState extends State<CompanySettingsScreen> {
                   icon: const Icon(Icons.check_circle_outline, size: 20),
                   label: Text(localizations.selectCompany),
                   style: TextButton.styleFrom(
-                    foregroundColor: const Color(0xFF155096),
+                    foregroundColor: Theme.of(context).primaryColor,
                   ),
                 ),
                 const SizedBox(width: 8),

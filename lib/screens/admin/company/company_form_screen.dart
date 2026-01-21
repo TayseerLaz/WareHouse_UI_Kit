@@ -75,7 +75,7 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
     final isEdit = widget.company != null;
 
@@ -92,9 +92,9 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
               top: 60,
               bottom: 30,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -259,17 +259,17 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
                   onPressed: () => Navigator.pop(context),
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 16),
-                    side: const BorderSide(color: Color(0xFF155096), width: 2),
+                    side: BorderSide(color: themeColor, width: 2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
                   child: Text(
                     localizations.cancel,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF155096),
+                      color: themeColor,
                     ),
                   ),
                 ),
@@ -281,7 +281,7 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
                   onPressed: _saveCompany,
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 16),
-                    backgroundColor: const Color(0xFF155096),
+                    backgroundColor: themeColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -309,10 +309,10 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: const Color(0xFF155096).withValues(alpha: 0.1),
+            color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Icon(icon, color: const Color(0xFF155096), size: 20),
+          child: Icon(icon, color: Theme.of(context).primaryColor, size: 20),
         ),
         const SizedBox(width: 12),
         Text(
@@ -356,7 +356,7 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: const TextStyle(color: Color(0xFF999999)),
-            prefixIcon: Icon(icon, color: const Color(0xFF155096)),
+            prefixIcon: Icon(icon, color: Theme.of(context).primaryColor),
             filled: true,
             fillColor: Colors.white,
             border: OutlineInputBorder(
@@ -403,11 +403,11 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: const TextStyle(color: Color(0xFF999999)),
-            prefixIcon: const Icon(Icons.lock_outline, color: Color(0xFF155096)),
+            prefixIcon: Icon(Icons.lock_outline, color: Theme.of(context).primaryColor),
             suffixIcon: IconButton(
               icon: Icon(
                 showPassword ? Icons.visibility_outlined : Icons.visibility_off_outlined,
-                color: const Color(0xFF155096),
+                color: Theme.of(context).primaryColor,
               ),
               onPressed: onToggle,
             ),
@@ -461,7 +461,7 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
             child: DropdownButton<String>(
               value: value,
               isExpanded: true,
-              icon: const Icon(Icons.arrow_drop_down, color: Color(0xFF155096)),
+              icon: Icon(Icons.arrow_drop_down, color: Theme.of(context).primaryColor),
               items: items.map((item) {
                 return DropdownMenuItem(
                   value: item,

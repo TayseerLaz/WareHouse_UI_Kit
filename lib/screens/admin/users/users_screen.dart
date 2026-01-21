@@ -44,7 +44,7 @@ class _UsersScreenState extends State<UsersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -60,9 +60,9 @@ class _UsersScreenState extends State<UsersScreen> {
               top: 60,
               bottom: 30,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -102,7 +102,7 @@ class _UsersScreenState extends State<UsersScreen> {
                     decoration: InputDecoration(
                       hintText: localizations.searchUsers,
                       hintStyle: const TextStyle(color: Color(0xFF999999)),
-                      prefixIcon: const Icon(Icons.search, color: Color(0xFF155096)),
+                      prefixIcon: Icon(Icons.search, color: Theme.of(context).primaryColor),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -198,13 +198,13 @@ class _UsersScreenState extends State<UsersScreen> {
         });
       },
       backgroundColor: Colors.white,
-      selectedColor: const Color(0xFF155096).withValues(alpha: 0.2),
+      selectedColor: Theme.of(context).primaryColor.withValues(alpha: 0.2),
       labelStyle: TextStyle(
-        color: isSelected ? const Color(0xFF155096) : const Color(0xFF595959),
+        color: isSelected ? Theme.of(context).primaryColor : const Color(0xFF595959),
         fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
       ),
       side: BorderSide(
-        color: isSelected ? const Color(0xFF155096) : const Color(0xFFE0E0E0),
+        color: isSelected ? Theme.of(context).primaryColor : const Color(0xFFE0E0E0),
         width: 1.5,
       ),
     );
@@ -233,11 +233,11 @@ class _UsersScreenState extends State<UsersScreen> {
               children: [
                 CircleAvatar(
                   radius: 24,
-                  backgroundColor: const Color(0xFF155096).withValues(alpha: 0.1),
+                  backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                   child: Text(
                     user['name'].toString().substring(0, 1).toUpperCase(),
-                    style: const TextStyle(
-                      color: Color(0xFF155096),
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
@@ -300,7 +300,7 @@ class _UsersScreenState extends State<UsersScreen> {
                       arguments: user,
                     );
                   },
-                  icon: const Icon(Icons.edit_outlined, color: Color(0xFF155096)),
+                  icon: Icon(Icons.edit_outlined, color: Theme.of(context).primaryColor),
                   tooltip: localizations.edit,
                 ),
                 // Delete Button

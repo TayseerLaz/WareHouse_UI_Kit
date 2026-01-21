@@ -49,7 +49,7 @@ class _GRPOFinalizationScreenState extends State<GRPOFinalizationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     final List<Map<String, String>> statusOptions = [
@@ -73,9 +73,9 @@ class _GRPOFinalizationScreenState extends State<GRPOFinalizationScreen> {
               top: 60,
               bottom: 20,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -304,7 +304,7 @@ class _GRPOFinalizationScreenState extends State<GRPOFinalizationScreen> {
                       onPressed: _handleSaveAsDraft,
                       style: OutlinedButton.styleFrom(
                         foregroundColor: themeColor,
-                        side: const BorderSide(color: themeColor, width: 2),
+                        side: BorderSide(color: themeColor, width: 2),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),

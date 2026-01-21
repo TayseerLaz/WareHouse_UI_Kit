@@ -6,7 +6,7 @@ class NavigationMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -26,7 +26,7 @@ class NavigationMenuScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 40),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
@@ -35,7 +35,7 @@ class NavigationMenuScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 40,
                   backgroundColor: Colors.white,
                   child: Icon(Icons.person, size: 40, color: themeColor),

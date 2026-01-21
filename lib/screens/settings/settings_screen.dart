@@ -140,15 +140,15 @@ class SettingsScreen extends StatelessWidget {
                   // Personal Information
                   _buildSectionHeader(localizations.personalInformation, context),
                   const SizedBox(height: 16),
-                  _buildInputField(localizations.name, localizations.enterName),
+                  _buildInputField(localizations.name, localizations.enterName, context),
                   const SizedBox(height: 12),
-                  _buildInputField(localizations.email, localizations.enterEmail),
+                  _buildInputField(localizations.email, localizations.enterEmail, context),
                   const SizedBox(height: 12),
-                  _buildInputField(localizations.phoneNumber, localizations.enterPhoneNumber),
+                  _buildInputField(localizations.phoneNumber, localizations.enterPhoneNumber, context),
                   const SizedBox(height: 12),
-                  _buildInputField(localizations.password, localizations.enterPassword, isPassword: true),
+                  _buildInputField(localizations.password, localizations.enterPassword, context, isPassword: true),
                   const SizedBox(height: 12),
-                  _buildInputField(localizations.imeiNumber, localizations.enterImei),
+                  _buildInputField(localizations.imeiNumber, localizations.enterImei, context),
 
                   const SizedBox(height: 32),
 
@@ -289,7 +289,7 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildInputField(String label, String placeholder, {bool isPassword = false}) {
+  Widget _buildInputField(String label, String placeholder, BuildContext context, {bool isPassword = false}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -330,7 +330,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(color: Color(0xFF155096), width: 1.5),
+                borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 1.5),
               ),
             ),
           ),
@@ -384,7 +384,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(color: Color(0xFF155096), width: 1.5),
+                borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 1.5),
               ),
             ),
             hint: Text('${AppLocalizations.of(context)!.select} $label'),

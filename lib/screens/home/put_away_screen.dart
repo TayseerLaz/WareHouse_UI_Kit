@@ -52,7 +52,7 @@ class _PutAwayScreenState extends State<PutAwayScreen> {
             ),
             const SizedBox(height: 16),
             ..._availableBins.map((bin) => ListTile(
-              leading: const Icon(Icons.inventory_2, color: Color(0xFF155096)),
+              leading: Icon(Icons.inventory_2, color: Theme.of(context).primaryColor),
               title: Text(bin),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () {
@@ -70,7 +70,7 @@ class _PutAwayScreenState extends State<PutAwayScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -86,9 +86,9 @@ class _PutAwayScreenState extends State<PutAwayScreen> {
               top: 60,
               bottom: 20,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -191,12 +191,12 @@ class _PutAwayScreenState extends State<PutAwayScreen> {
                               Container(
                                 padding: const EdgeInsets.all(6),
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFF155096).withValues(alpha: 0.1),
+                                  color: themeColor.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(6),
                                 ),
-                                child: const Icon(
+                                child: Icon(
                                   Icons.inventory_2,
-                                  color: Color(0xFF155096),
+                                  color: themeColor,
                                   size: 18,
                                 ),
                               ),
@@ -245,7 +245,7 @@ class _PutAwayScreenState extends State<PutAwayScreen> {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF155096),
+                        backgroundColor: themeColor,
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),

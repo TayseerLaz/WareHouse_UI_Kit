@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Theme color used throughout
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
     
     return Scaffold(
@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-              decoration: const ShapeDecoration(
+              decoration: ShapeDecoration(
                 color: themeColor, // Changed from black overlay to theme color
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
             // Content
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: Column(
                   children: [
                     _buildMenuItem(
@@ -147,8 +147,8 @@ class HomeScreen extends StatelessWidget {
             // Bottom Navigation
             Container(
               width: double.infinity,
-              decoration: const ShapeDecoration(
-                color: Colors.white,
+              decoration: ShapeDecoration(
+                color: themeColor, // Changed to theme color for better contrast
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
@@ -164,12 +164,12 @@ class HomeScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildNavItem(localizations.home, Icons.home_outlined, true, themeColor),
-                        _buildNavItem(localizations.inventory, Icons.inventory_2_outlined, false, themeColor),
-                        _buildNavItem(localizations.analytics, Icons.analytics_outlined, false, themeColor),
+                        _buildNavItem(localizations.home, Icons.home_outlined, true, Colors.white),
+                        _buildNavItem(localizations.inventory, Icons.inventory_2_outlined, false, Colors.white),
+                        _buildNavItem(localizations.analytics, Icons.analytics_outlined, false, Colors.white),
                         GestureDetector(
                           onTap: () => Navigator.pushNamed(context, '/navigation_menu'),
-                          child: _buildNavItem(localizations.navigation, Icons.menu, false, themeColor),
+                          child: _buildNavItem(localizations.navigation, Icons.menu, false, Colors.white),
                         ),
                       ],
                     ),
@@ -182,7 +182,7 @@ class HomeScreen extends StatelessWidget {
                         height: 4,
                         margin: const EdgeInsets.only(bottom: 8),
                         decoration: ShapeDecoration(
-                          color: const Color(0xFF79747E),
+                          color: Colors.white, // Changed indicator to white
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(100),
                           ),

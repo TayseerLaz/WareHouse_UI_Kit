@@ -64,7 +64,7 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Color(0xFF155096);
+    final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
     
     // Get role data from navigation arguments
@@ -84,9 +84,9 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
               top: 60,
               bottom: 30,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
@@ -294,13 +294,13 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: hasAnyPermission
-                ? const Color(0xFF155096).withValues(alpha: 0.1)
+                ? Theme.of(context).primaryColor.withValues(alpha: 0.1)
                 : Colors.grey.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(
             icon,
-            color: hasAnyPermission ? const Color(0xFF155096) : Colors.grey,
+            color: hasAnyPermission ? Theme.of(context).primaryColor : Colors.grey,
             size: 24,
           ),
         ),
@@ -318,7 +318,7 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
           onChanged: (value) {
             _toggleAllSubPermissions(key, value ?? false);
           },
-          activeColor: const Color(0xFF155096),
+          activeColor: Theme.of(context).primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
           ),
@@ -367,7 +367,7 @@ class _AuthorizationDetailsScreenState extends State<AuthorizationDetailsScreen>
           Checkbox(
             value: isGranted,
             onChanged: (value) => _toggleSubPermission(moduleKey, action),
-            activeColor: const Color(0xFF155096),
+            activeColor: Theme.of(context).primaryColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
             ),
