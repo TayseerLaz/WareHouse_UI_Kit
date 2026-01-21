@@ -2329,6 +2329,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Company Information'**
   String get companyInformation;
+
+  /// No description provided for @generalSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'General Settings'**
+  String get generalSettings;
+
+  /// No description provided for @loginWithFingerprint.
+  ///
+  /// In en, this message translates to:
+  /// **'Login with Fingerprint'**
+  String get loginWithFingerprint;
+
+  /// No description provided for @biometricAuthentication.
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric Authentication'**
+  String get biometricAuthentication;
+
+  /// No description provided for @touchSensorToLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Touch sensor to login'**
+  String get touchSensorToLogin;
+
+  /// No description provided for @biometricNotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric authentication not available'**
+  String get biometricNotAvailable;
+
+  /// No description provided for @biometricAuthFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication failed'**
+  String get biometricAuthFailed;
+
+  /// No description provided for @rememberMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Remember me'**
+  String get rememberMe;
+
+  /// No description provided for @signInWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with'**
+  String get signInWith;
+
+  /// No description provided for @dontHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account?'**
+  String get dontHaveAccount;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up'**
+  String get signUp;
 }
 
 class _AppLocalizationsDelegate

@@ -1131,4 +1131,34 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get companyInformation => 'معلومات الشركة';
+
+  @override
+  String get generalSettings => 'الإعدادات العامة';
+
+  @override
+  String get loginWithFingerprint => 'تسجيل الدخول ببصمة الإصبع';
+
+  @override
+  String get biometricAuthentication => 'المصادقة البيومترية';
+
+  @override
+  String get touchSensorToLogin => 'المس المستشعر لتسجيل الدخول';
+
+  @override
+  String get biometricNotAvailable => 'المصادقة البيومترية غير متاحة';
+
+  @override
+  String get biometricAuthFailed => 'فشلت المصادقة';
+
+  @override
+  String get rememberMe => 'تذكرني';
+
+  @override
+  String get signInWith => 'تسجيل الدخول باستخدام';
+
+  @override
+  String get dontHaveAccount => 'ليس لديك حساب؟';
+
+  @override
+  String get signUp => 'إنشاء حساب';
 }

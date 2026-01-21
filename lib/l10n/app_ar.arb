@@ -409,5 +409,15 @@
   "companySynced": "تمت مزامنة الشركة بنجاح",
   "confirmDeleteCompany": "هل أنت متأكد من حذف هذه الشركة؟",
   "pleaseEnterCompanyCode": "يرجى إدخال كود الشركة",
-  "companyInformation": "معلومات الشركة"
+  "companyInformation": "معلومات الشركة",
+  "generalSettings": "الإعدادات العامة",
+  "loginWithFingerprint": "تسجيل الدخول ببصمة الإصبع",
+  "biometricAuthentication": "المصادقة البيومترية",
+  "touchSensorToLogin": "المس المستشعر لتسجيل الدخول",
+  "biometricNotAvailable": "المصادقة البيومترية غير متاحة",
+  "biometricAuthFailed": "فشلت المصادقة",
+  "rememberMe": "تذكرني",
+  "signInWith": "تسجيل الدخول باستخدام",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "signUp": "إنشاء حساب"
 }

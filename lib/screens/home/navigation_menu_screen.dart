@@ -73,7 +73,7 @@ class NavigationMenuScreen extends StatelessWidget {
               children: [
                 _buildMenuButton(context, 'Pegolive_US', Icons.business, themeColor),
                 const SizedBox(height: 12),
-                _buildMenuButton(context, localizations.companySettings, Icons.settings_outlined, themeColor),
+                _buildMenuButton(context, localizations.generalSettings, Icons.settings_outlined, themeColor),
                 const SizedBox(height: 12),
                 _buildMenuButton(context, localizations.userSettings, Icons.person_outline, themeColor),
                 const SizedBox(height: 12),
@@ -131,7 +131,7 @@ class NavigationMenuScreen extends StatelessWidget {
             final localizations = AppLocalizations.of(context)!;
             if (title == localizations.logOut) {
                Navigator.popUntil(context, ModalRoute.withName('/'));
-            } else if (title == localizations.companySettings) {
+            } else if (title == localizations.generalSettings) {
                Navigator.pushNamed(context, '/profile');
             } else if (title == localizations.userSettings) {
                Navigator.pushNamed(context, '/settings');

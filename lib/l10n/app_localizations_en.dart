@@ -1133,4 +1133,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get companyInformation => 'Company Information';
+
+  @override
+  String get generalSettings => 'General Settings';
+
+  @override
+  String get loginWithFingerprint => 'Login with Fingerprint';
+
+  @override
+  String get biometricAuthentication => 'Biometric Authentication';
+
+  @override
+  String get touchSensorToLogin => 'Touch sensor to login';
+
+  @override
+  String get biometricNotAvailable => 'Biometric authentication not available';
+
+  @override
+  String get biometricAuthFailed => 'Authentication failed';
+
+  @override
+  String get rememberMe => 'Remember me';
+
+  @override
+  String get signInWith => 'Sign in with';
+
+  @override
+  String get dontHaveAccount => 'Don\'t have an account?';
+
+  @override
+  String get signUp => 'Sign up';
 }

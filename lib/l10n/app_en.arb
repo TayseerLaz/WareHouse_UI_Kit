@@ -416,5 +416,15 @@
   "companySynced": "Company synced successfully",
   "confirmDeleteCompany": "Are you sure you want to delete this company?",
   "pleaseEnterCompanyCode": "Please enter company code",
-  "companyInformation": "Company Information"
+  "companyInformation": "Company Information",
+  "generalSettings": "General Settings",
+  "loginWithFingerprint": "Login with Fingerprint",
+  "biometricAuthentication": "Biometric Authentication",
+  "touchSensorToLogin": "Touch sensor to login",
+  "biometricNotAvailable": "Biometric authentication not available",
+  "biometricAuthFailed": "Authentication failed",
+  "rememberMe": "Remember me",
+  "signInWith": "Sign in with",
+  "dontHaveAccount": "Don't have an account?",
+  "signUp": "Sign up"
 }
