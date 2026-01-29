@@ -1,15 +1,66 @@
 import 'package:flutter/material.dart';
-
 import '../../l10n/app_localizations.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool _isGridView = false;
 
   @override
   Widget build(BuildContext context) {
     // Theme color used throughout
     final themeColor = Theme.of(context).primaryColor;
     final localizations = AppLocalizations.of(context)!;
+
+    // Define helper to build item data
+    Map<String, dynamic> item(String title, String subtitle, IconData icon, [String? route]) {
+      return {
+        'title': title,
+        'subtitle': subtitle,
+        'icon': icon,
+        'route': route,
+      };
+    }
+
+    // Categorized Data
+    // We use a List of Maps to maintain order and categories
+    final List<Map<String, dynamic>> categories = [
+      {
+        'title': localizations.inbound,
+        'items': [
+          item(localizations.goodReceipts, localizations.goodReceiptsSubtitle, Icons.receipt_long),
+          item(localizations.receivingFromVendors, localizations.receivingFromVendorsSubtitle, Icons.arrow_downward, '/receiving_from_vendor'),
+          item(localizations.inventoryTransferIn, localizations.inventoryTransferInSubtitle, Icons.input_outlined),
+        ]
+      },
+      {
+        'title': localizations.outbound,
+        'items': [
+           item(localizations.goodIssue, localizations.goodIssueSubtitle, Icons.output),
+           item(localizations.returnToVendor, localizations.returnToVendorSubtitle, Icons.arrow_upward),
+           item(localizations.deliveryToCustomer, localizations.deliveryToCustomerSubtitle, Icons.local_shipping_outlined),
+        ]
+      },
+      {
+        'title': localizations.inventory,
+        'items': [
+          item(localizations.transactions, localizations.transactionsSubtitle, Icons.history),
+          item(localizations.inventoryTransfer, localizations.inventoryTransferSubtitle, Icons.swap_horiz),
+          item(localizations.inventoryMove, localizations.inventoryMoveSubtitle, Icons.drive_file_move_outlined),
+        ]
+      },
+      {
+        'title': 'Returns', // Fallback or add key if possible. Using English 'Returns' or specific key if found.
+        'items': [
+           item(localizations.returnFromCustomer, localizations.returnFromCustomerSubtitle, Icons.assignment_return_outlined),
+        ]
+      }
+    ];
     
     return Scaffold(
       backgroundColor: const Color(0xFFE8F0FB),
@@ -19,48 +70,86 @@ class HomeScreen extends StatelessWidget {
             // Header
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               decoration: ShapeDecoration(
-                color: themeColor, // Changed from black overlay to theme color
-                shape: RoundedRectangleBorder(
+                color: themeColor,
+                shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40),
                     bottomRight: Radius.circular(40),
                   ),
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                   // Top Row: User Info & Actions
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        localizations.helloUser('User1'),
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            localizations.helloUser('User1'),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          const Text(
+                            'Monday, 17 Jan 2026',
+                            style: TextStyle(
+                              color: Color(0xFFD4FBF6),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 4),
-                      const Text(
-                        'Monday, 17 Jan 2026',
-                        style: TextStyle(
-                          color: Color(0xFFD4FBF6),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                        ),
+                      Row(
+                        children: [
+                          // View Toggle
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                _isGridView = !_isGridView;
+                              });
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.2),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Icon(
+                                _isGridView ? Icons.view_list_rounded : Icons.grid_view_rounded,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          // Notification Icon
+                          GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, '/notifications'),
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.2),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Icon(
+                                Icons.notifications_outlined,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
-                  ),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/notifications'),
-                    child: const Icon(
-                      Icons.notifications_outlined,
-                      color: Colors.white,
-                      size: 24,
-                    ),
                   ),
                 ],
               ),
@@ -69,90 +158,80 @@ class HomeScreen extends StatelessWidget {
             // Content
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 100), // Added bottom padding for nav bar space
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildMenuItem(
-                      localizations.goodReceipts,
-                      localizations.goodReceiptsSubtitle,
-                      Icons.receipt_long,
-                      themeColor,
+                    // Quick Actions
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 24),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          _buildQuickActionButton(localizations.scanQR, Icons.qr_code_scanner, themeColor, () {}),
+                          _buildQuickActionButton('Assign', Icons.add_circle_outline, themeColor, () {}),
+                          _buildQuickActionButton('Favorite', Icons.star_outline, themeColor, () {}),
+                          _buildQuickActionButton('More', Icons.grid_view, themeColor, () {}),
+                        ],
+                      ),
                     ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.goodIssue,
-                      localizations.goodIssueSubtitle,
-                      Icons.output,
-                      themeColor,
-                    ),
-                     const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.transactions,
-                      localizations.transactionsSubtitle,
-                      Icons.history,
-                      themeColor,
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.receivingFromVendors,
-                      localizations.receivingFromVendorsSubtitle,
-                      Icons.arrow_downward,
-                      themeColor,
-                      onTap: () => Navigator.pushNamed(context, '/receiving_from_vendor'),
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.returnToVendor,
-                      localizations.returnToVendorSubtitle,
-                      Icons.arrow_upward,
-                      themeColor,
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.deliveryToCustomer,
-                      localizations.deliveryToCustomerSubtitle,
-                      Icons.local_shipping_outlined,
-                      themeColor,
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.returnFromCustomer,
-                      localizations.returnFromCustomerSubtitle,
-                      Icons.assignment_return_outlined,
-                      themeColor,
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.inventoryTransfer,
-                      localizations.inventoryTransferSubtitle,
-                      Icons.swap_horiz,
-                      themeColor,
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.inventoryTransferIn,
-                      localizations.inventoryTransferInSubtitle,
-                      Icons.input_outlined,
-                      themeColor,
-                    ),
-                    const SizedBox(height: 12),
-                    _buildMenuItem(
-                      localizations.inventoryMove,
-                      localizations.inventoryMoveSubtitle,
-                      Icons.drive_file_move_outlined,
-                      themeColor,
-                    ),
+
+                    for (var category in categories) ...[
+                      // Section Title
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 12, top: 8),
+                        child: Text(
+                          category['title'],
+                          style: TextStyle(
+                            color: themeColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      // Items
+                      if (_isGridView)
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 16,
+                            mainAxisSpacing: 16,
+                            childAspectRatio: 1.1, // Adjust for card shape
+                          ),
+                          itemCount: (category['items'] as List).length,
+                          itemBuilder: (context, index) {
+                            final item = category['items'][index];
+                            return _buildGridCard(context, item, themeColor);
+                          },
+                        )
+                      else
+                        ListView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: (category['items'] as List).length,
+                          itemBuilder: (context, index) {
+                            final item = category['items'][index];
+                            return Padding(
+                              padding: const EdgeInsets.only(bottom: 12),
+                              child: _buildListCard(context, item, themeColor),
+                            );
+                          },
+                        ),
+                       const SizedBox(height: 16),
+                    ],
                   ],
                 ),
               ),
             ),
             
-            // Bottom Navigation
+            // Bottom Navigation (Keeping existing design)
             Container(
               width: double.infinity,
               decoration: ShapeDecoration(
-                color: themeColor, // Changed to theme color for better contrast
-                shape: RoundedRectangleBorder(
+                color: themeColor,
+                shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16),
@@ -185,7 +264,7 @@ class HomeScreen extends StatelessWidget {
                         height: 4,
                         margin: const EdgeInsets.only(bottom: 8),
                         decoration: ShapeDecoration(
-                          color: Colors.white, // Changed indicator to white
+                          color: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(100),
                           ),
@@ -202,37 +281,39 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildMenuItem(
-    String title,
-    String subtitle,
-    IconData icon,
-    Color themeColor, {
-    VoidCallback? onTap,
-  }) {
+  // --- List View Card ---
+  Widget _buildListCard(BuildContext context, Map<String, dynamic> item, Color themeColor) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: item['route'] != null ? () => Navigator.pushNamed(context, item['route']) : null,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
+          shadows: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            )
+          ],
         ),
         child: Row(
           children: [
             Container(
-              width: 40,
-              height: 40,
+              width: 48,
+              height: 48,
               decoration: BoxDecoration(
                 color: themeColor.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(
-                icon,
+                item['icon'],
                 color: themeColor,
-                size: 20,
+                size: 24,
               ),
             ),
             const SizedBox(width: 16),
@@ -241,7 +322,7 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                    item['title'],
                     style: const TextStyle(
                       color: Color(0xFF262626),
                       fontSize: 16,
@@ -250,23 +331,110 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    subtitle,
+                    item['subtitle'],
                     style: const TextStyle(
                       color: Color(0xFF595959),
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                     ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),
             ),
             const Icon(
               Icons.arrow_forward_ios,
-              color: Color(0xFF595959),
+              color: Color(0xFFCCCCCC),
               size: 16,
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  // --- Grid View Card ---
+  Widget _buildGridCard(BuildContext context, Map<String, dynamic> item, Color themeColor) {
+    return GestureDetector(
+      onTap: item['route'] != null ? () => Navigator.pushNamed(context, item['route']) : null,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: themeColor.withValues(alpha: 0.1),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                item['icon'],
+                color: themeColor,
+                size: 28,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              item['title'],
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Color(0xFF262626),
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                height: 1.2,
+              ),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildQuickActionButton(String label, IconData icon, Color themeColor, VoidCallback onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+              boxShadow: [
+                 BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                 ),
+              ],
+            ),
+            child: Icon(icon, color: themeColor, size: 28),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: const TextStyle(
+              color: Color(0xFF595959),
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -25,7 +25,7 @@ class NavigationMenuScreen extends StatelessWidget {
           // User Profile Section
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 40),
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 24),
             decoration: BoxDecoration(
               color: themeColor,
               borderRadius: BorderRadius.only(

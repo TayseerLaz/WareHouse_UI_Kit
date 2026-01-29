@@ -22,8 +22,8 @@ class ReceivingFromVendorScreen extends StatelessWidget {
             padding: const EdgeInsets.only(
               left: 20,
               right: 20,
-              top: 60,
-              bottom: 30,
+              top: 50,
+              bottom: 15,
             ),
             decoration: BoxDecoration(
               color: themeColor,
