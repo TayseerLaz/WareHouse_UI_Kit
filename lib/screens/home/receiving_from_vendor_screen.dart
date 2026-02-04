@@ -27,10 +27,6 @@ class ReceivingFromVendorScreen extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
-              ),
             ),
             child: Row(
               children: [

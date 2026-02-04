@@ -28,10 +28,6 @@ class NavigationMenuScreen extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 24),
             decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
-              ),
             ),
             child: Column(
               children: [

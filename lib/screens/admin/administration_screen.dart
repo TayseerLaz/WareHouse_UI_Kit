@@ -19,15 +19,11 @@ class AdministrationScreen extends StatelessWidget {
             padding: const EdgeInsets.only(
               left: 20,
               right: 20,
-              top: 60, // Safe area equivalent + padding
-              bottom: 40, // Extra length as requested
+              top: 50,
+              bottom: 15,
             ),
             decoration: BoxDecoration(
               color: themeColor,
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
-              ),
             ),
             child: Row(
               children: [

@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool _isGridView = false;
+  bool _isGridView = true;
 
   @override
   Widget build(BuildContext context) {
@@ -70,15 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
             // Header
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-              decoration: ShapeDecoration(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              decoration: BoxDecoration(
                 color: themeColor,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40),
-                    bottomRight: Radius.circular(40),
-                  ),
-                ),
               ),
               child: Column(
                 children: [
@@ -99,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           const SizedBox(height: 4),
                           const Text(
-                            'Monday, 17 Jan 2026',
+                            'Pegolive_US',
                             style: TextStyle(
                               color: Color(0xFFD4FBF6),
                               fontSize: 12,
@@ -162,20 +156,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Quick Actions
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 24),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          _buildQuickActionButton(localizations.scanQR, Icons.qr_code_scanner, themeColor, () {}),
-                          _buildQuickActionButton('Assign', Icons.add_circle_outline, themeColor, () {}),
-                          _buildQuickActionButton('Favorite', Icons.star_outline, themeColor, () {}),
-                          _buildQuickActionButton('More', Icons.grid_view, themeColor, () {}),
-                        ],
-                      ),
-                    ),
-
                     for (var category in categories) ...[
                       // Section Title
                       Padding(
@@ -229,14 +209,8 @@ class _HomeScreenState extends State<HomeScreen> {
             // Bottom Navigation (Keeping existing design)
             Container(
               width: double.infinity,
-              decoration: ShapeDecoration(
+              decoration: BoxDecoration(
                 color: themeColor,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    topRight: Radius.circular(16),
-                  ),
-                ),
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -401,40 +375,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildQuickActionButton(String label, IconData icon, Color themeColor, VoidCallback onTap) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-              boxShadow: [
-                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.05),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
-                 ),
-              ],
-            ),
-            child: Icon(icon, color: themeColor, size: 28),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            label,
-            style: const TextStyle(
-              color: Color(0xFF595959),
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ],
       ),
     );
   }

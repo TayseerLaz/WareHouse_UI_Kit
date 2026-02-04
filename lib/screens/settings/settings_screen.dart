@@ -57,17 +57,13 @@ class SettingsScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: const EdgeInsets.only(
-              left: 20, 
-              right: 20, 
-              top: 60, 
-              bottom: 40
+              left: 20,
+              right: 20,
+              top: 40,
+              bottom: 15
             ),
             decoration: BoxDecoration(
               color: themeProvider.isActive ? themeColor : Colors.grey[700],
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
-              ),
             ),
              child: Row(
               children: [
